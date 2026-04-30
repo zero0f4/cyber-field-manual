@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATT&amp;CK + D3FEND — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">ATT&amp;CK / D3FEND</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">ATT&amp;CK + D3FEND</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">ATT&amp;CK + D3FEND</div>
+        <div class="page-subtitle">14 ATT&amp;CK-tactieken + sub-techniques + Mitigations + 6 D3FEND-tactieken</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+
+      <style>.ta-pill{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--accent-glow);color:var(--accent);font-size:12px;border:1px solid var(--accent-dim);margin:2px}.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px}.dm-card{padding:10px;border:1px solid var(--border);border-radius:8px}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> MITRE ATT&amp;CK</h2>
+          <p>Open kennisbank van tactieken (waarom), technieken (hoe) en procedures (variant) van cyberaanvallers. Onmisbaar als gedeeld vocabulaire tussen detectie, threat-intel en red team.</p>
+          <p><b>14 Enterprise-tactieken</b> in volgorde van een typische aanval:</p>
+          <div>
+            <span class="ta-pill">TA0043 Reconnaissance</span>
+            <span class="ta-pill">TA0042 Resource Development</span>
+            <span class="ta-pill">TA0001 Initial Access</span>
+            <span class="ta-pill">TA0002 Execution</span>
+            <span class="ta-pill">TA0003 Persistence</span>
+            <span class="ta-pill">TA0004 Privilege Escalation</span>
+            <span class="ta-pill">TA0005 Defense Evasion</span>
+            <span class="ta-pill">TA0006 Credential Access</span>
+            <span class="ta-pill">TA0007 Discovery</span>
+            <span class="ta-pill">TA0008 Lateral Movement</span>
+            <span class="ta-pill">TA0009 Collection</span>
+            <span class="ta-pill">TA0011 Command &amp; Control</span>
+            <span class="ta-pill">TA0010 Exfiltration</span>
+            <span class="ta-pill">TA0040 Impact</span>
+          </div>
+        </section>
+
+        <section class="manual-section">
+          <h3>Techniek-hiërarchie</h3>
+          <ul>
+            <li><b>Technique (Txxxx)</b> — bv. T1059 Command and Scripting Interpreter</li>
+            <li><b>Sub-technique (Txxxx.yyy)</b> — bv. T1059.001 PowerShell, T1059.003 Windows Command Shell</li>
+            <li><b>Procedure</b> — concrete uitvoering door een specifieke actor of malware-sample, beschrijvend in het rapport</li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h3>Bijbehorende objecten</h3>
+          <div class="dm-cards">
+            <div class="dm-card"><b>Mitigations (Mxxxx)</b><br><span style="font-size:12px;color:var(--text-secondary)">~40 generieke verdedigingen, bv. M1042 Disable or Remove Feature, M1026 Privileged Account Management.</span></div>
+            <div class="dm-card"><b>Data Sources (DSxxxx)</b><br><span style="font-size:12px;color:var(--text-secondary)">~40 telemetriebronnen, bv. DS0009 Process, DS0017 Command. Geeft per techniek aan wát je moet loggen.</span></div>
+            <div class="dm-card"><b>Detections</b><br><span style="font-size:12px;color:var(--text-secondary)">Beschrijvende richtlijn per techniek hoe te detecteren — input voor Sigma-regels.</span></div>
+            <div class="dm-card"><b>Groups (Gxxxx)</b><br><span style="font-size:12px;color:var(--text-secondary)">~150 actor-groepen met aliassen, bekende technieken en software.</span></div>
+            <div class="dm-card"><b>Software (Sxxxx)</b><br><span style="font-size:12px;color:var(--text-secondary)">~700 malware/tooling-entries (Mimikatz, Cobalt Strike, etc.).</span></div>
+            <div class="dm-card"><b>Campaigns (Cxxxx)</b><br><span style="font-size:12px;color:var(--text-secondary)">Specifieke geclusterde aanvalscampagnes, gekoppeld aan een groep.</span></div>
+          </div>
+        </section>
+
+        <section class="manual-section">
+          <h3>Werken met ATT&amp;CK</h3>
+          <ul>
+            <li><b>Threat-intel:</b> noteer in elk rapport welke ATT&amp;CK-techniek-IDs (Txxxx) zijn waargenomen.</li>
+            <li><b>Detectie-coverage:</b> ATT&amp;CK Navigator-layer per detectie-regel — heatmap-gewijs zien waar je gaten zitten.</li>
+            <li><b>Red &amp; purple team:</b> emuleer technieken (Atomic Red Team, Caldera), meet detection latency.</li>
+            <li><b>Sub-domains:</b> ATT&amp;CK Mobile, ATT&amp;CK ICS, MITRE ATLAS (AI), MITRE Engenuity Evaluations.</li>
+          </ul>
+          <p><a href="https://attack.mitre.org/" target="_blank" style="color:var(--accent)">attack.mitre.org</a> · <a href="https://mitre-attack.github.io/attack-navigator/" target="_blank" style="color:var(--accent)">ATT&amp;CK Navigator</a> · <a href="https://atlas.mitre.org/" target="_blank" style="color:var(--accent)">MITRE ATLAS</a></p>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">02</span> MITRE D3FEND</h2>
+          <p>Defensieve tegenhanger van ATT&amp;CK: kennisgraaf van detectie-, isolatie-, deceptie- en evictie-technieken, expliciet gekoppeld aan ATT&amp;CK-technieken via "digital artifacts" (proces, file, account, netwerkstroom). Beheerd door MITRE, NSA-funded.</p>
+          <p><b>6 D3FEND-tactieken:</b></p>
+          <div class="dm-cards">
+            <div class="dm-card"><b style="color:var(--accent)">Model</b><p style="font-size:12px;margin:4px 0 0 0;color:var(--text-secondary)">Asset/identity/network/data inventarisatie.</p></div>
+            <div class="dm-card"><b style="color:var(--green)">Harden</b><p style="font-size:12px;margin:4px 0 0 0;color:var(--text-secondary)">Patching, baselines, allow-listing, encryptie.</p></div>
+            <div class="dm-card"><b style="color:var(--yellow)">Detect</b><p style="font-size:12px;margin:4px 0 0 0;color:var(--text-secondary)">Logs, FIM, EDR, netwerkanalyse, SIEM-correlaties.</p></div>
+            <div class="dm-card"><b style="color:var(--orange)">Isolate</b><p style="font-size:12px;margin:4px 0 0 0;color:var(--text-secondary)">Segmentatie, sandboxing, microsegmentatie, ZTNA.</p></div>
+            <div class="dm-card"><b style="color:var(--red)">Deceive</b><p style="font-size:12px;margin:4px 0 0 0;color:var(--text-secondary)">Honeypots, decoy-credentials, canary-tokens.</p></div>
+            <div class="dm-card"><b style="color:var(--purple)">Evict</b><p style="font-size:12px;margin:4px 0 0 0;color:var(--text-secondary)">Account-revocatie, session-termination, host-isolation.</p></div>
+          </div>
+          <p><a href="https://d3fend.mitre.org/" target="_blank" style="color:var(--accent)">d3fend.mitre.org</a></p>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

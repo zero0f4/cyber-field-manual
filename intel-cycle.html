@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intel Cycle — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Intel Cycle</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Intel Cycle</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Intel Cycle</div>
+        <div class="page-subtitle">Direction · Collection · Processing · Analysis · Dissemination · Feedback</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px;display:flex;align-items:center;gap:6px}.dm-card .dot{display:inline-block;width:10px;height:10px;border-radius:50%}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.kv-row{display:flex;gap:10px;margin:4px 0}.kv-row b{min-width:140px;color:var(--text-primary)}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> De Intelligence Cycle</h2>
+          <p>De intelligence cycle is het iteratieve proces waarmee CTI-teams ruwe data omzetten in besluitvaardige inlichtingen. NATO, US-IC, FBI en ENISA hanteren dezelfde 6 fasen — alleen de naamgeving wijkt af.</p>
+        </section>
+        <section class="manual-section">
+          <h3>De 6 fasen</h3>
+          <div class="dm-cards">
+            <div class="dm-card"><h4><span class="dot" style="background:var(--accent)"></span> 1. Direction (PIRs)</h4><p>De besluitvormer formuleert <b>Priority Intelligence Requirements</b>: welke vragen moet intel beantwoorden? Zonder PIRs is collection blind.</p><p style="font-size:11px;color:var(--text-muted)">Voorbeeld: "Welke threat actors targeten zorginstellingen NL met ransomware?"</p></div>
+            <div class="dm-card"><h4><span class="dot" style="background:var(--cyan)"></span> 2. Collection</h4><p>Verzamelen: OSINT, HUMINT, SIGINT, technische feeds, vendor-rapporten, ISAC-deelnetwerken, dark web, eigen telemetrie.</p></div>
+            <div class="dm-card"><h4><span class="dot" style="background:var(--purple)"></span> 3. Processing</h4><p>Normaliseren: vertalen, decoderen, deduplicaten, koppelen aan eigen schema (STIX/TAXII, MISP, eigen ontologie).</p></div>
+            <div class="dm-card"><h4><span class="dot" style="background:var(--green)"></span> 4. Analysis</h4><p>Verbanden leggen: actor-mapping (Diamond), TTP-mapping (ATT&amp;CK), bron-evaluatie (Admiralty), confidence-niveau.</p></div>
+            <div class="dm-card"><h4><span class="dot" style="background:var(--yellow)"></span> 5. Dissemination</h4><p>Juist product → juiste afnemer → juist formaat: bulletin, IOC-feed, briefing, ATT&amp;CK Navigator-layer. TLP- en PAP-markering.</p></div>
+            <div class="dm-card"><h4><span class="dot" style="background:var(--red)"></span> 6. Feedback</h4><p>Sluit de cyclus. Klopt de PIR? Was het product bruikbaar? Welke gaps blijven? Drijft de volgende iteratie.</p></div>
+          </div>
+        </section>
+        <section class="manual-section">
+          <h3>F3EAD: actie-georiënteerde variant</h3>
+          <p><b>F3EAD</b> (Find, Fix, Finish, Exploit, Analyze, Disseminate) is afkomstig uit de US Special Operations en wordt vaak voor IR / threat-hunting toegepast. De cyclus loopt rond <em>kinetische actie</em> in plaats van pure rapportage. Zie <a href="analysis-methods.html#f3ead" style="color:var(--accent)">Analysis Methods</a> voor details.</p>
+        </section>
+        <section class="manual-section">
+          <h3>PIR-werkblad</h3>
+          <p>Leg per PIR vast: vraag, eigenaar, deadline, status. Lokaal opgeslagen.</p>
+          <div id="pirBoard"></div>
+          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+            <button class="btn" id="addPir">+ Nieuwe PIR</button>
+            <button class="btn" id="exportPirs">Export JSON</button>
+            <button class="btn" id="importPirsBtn">Import JSON</button>
+            <input type="file" id="importPirsFile" accept=".json,application/json" style="display:none">
+            <button class="btn" id="resetPirs" style="margin-left:auto">Reset werkblad</button>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+<script>
+(function(){
+  const KEY='cti:pirs'; let pirs=[]; try{pirs=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){pirs=[]}
+  const board=document.getElementById('pirBoard');
+  const save=()=>localStorage.setItem(KEY,JSON.stringify(pirs));
+  const uid=()=>'pir_'+Date.now()+'_'+Math.random().toString(36).slice(2,7);
+  const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  function render(){
+    if(!pirs.length){board.innerHTML='<div style="padding:24px;text-align:center;color:var(--text-muted);border:1px dashed var(--border);border-radius:var(--radius)">Nog geen PIRs. Klik op <b>+ Nieuwe PIR</b>.</div>';return}
+    board.innerHTML='<table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr style="background:var(--bg-elevated)"><th style="text-align:left;padding:8px">#</th><th style="text-align:left;padding:8px">Vraag</th><th style="text-align:left;padding:8px;width:140px">Eigenaar</th><th style="text-align:left;padding:8px;width:130px">Deadline</th><th style="text-align:left;padding:8px;width:140px">Status</th><th style="width:40px"></th></tr></thead><tbody>'+pirs.map((p,i)=>('<tr data-id="'+p.id+'" style="border-bottom:1px solid var(--border-light)"><td style="padding:6px;font-family:var(--font-mono);font-size:11px;color:var(--text-muted)">PIR-'+String(i+1).padStart(2,'0')+'</td><td style="padding:6px"><input data-f="q" type="text" value="'+esc(p.q)+'" placeholder="Welke informatie heb je nodig?" style="width:100%;background:transparent;border:1px solid transparent;color:var(--text-primary);padding:4px 6px;font-size:13px"></td><td style="padding:6px"><input data-f="owner" type="text" value="'+esc(p.owner)+'" placeholder="naam" style="width:100%;background:transparent;border:1px solid transparent;color:var(--text-primary);padding:4px 6px;font-size:12px"></td><td style="padding:6px"><input data-f="due" type="date" value="'+esc(p.due)+'" style="width:100%;background:transparent;border:1px solid transparent;color:var(--text-primary);padding:4px 6px;font-size:12px"></td><td style="padding:6px"><select data-f="status" style="width:100%;padding:4px 6px;font-size:12px"><option value="open"'+(p.status==='open'?' selected':'')+'>Open</option><option value="active"'+(p.status==='active'?' selected':'')+'>In onderzoek</option><option value="answered"'+(p.status==='answered'?' selected':'')+'>Beantwoord</option><option value="archived"'+(p.status==='archived'?' selected':'')+'>Gearchiveerd</option></select></td><td style="padding:6px;text-align:center"><button data-del="'+p.id+'" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:18px">×</button></td></tr>')).join('')+'</tbody></table>';
+  }
+  function setF(e){const tr=e.target.closest('tr[data-id]');if(!tr)return;const p=pirs.find(x=>x.id===tr.dataset.id);if(!p)return;const f=e.target.dataset.f;if(!f)return;p[f]=e.target.value;save()}
+  board.addEventListener('input',setF); board.addEventListener('change',setF);
+  board.addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(!b)return;if(!confirm('PIR verwijderen?'))return;pirs=pirs.filter(x=>x.id!==b.dataset.del);save();render()});
+  document.getElementById('addPir').addEventListener('click',()=>{pirs.push({id:uid(),q:'',owner:'',due:'',status:'open'});save();render()});
+  document.getElementById('exportPirs').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({type:'cti-pirs',version:1,exported_at:new Date().toISOString(),pirs},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='cti-pirs-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove()});
+  const ifile=document.getElementById('importPirsFile');document.getElementById('importPirsBtn').addEventListener('click',()=>ifile.click());
+  ifile.addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);const arr=Array.isArray(d)?d:(d.pirs||[]);if(!Array.isArray(arr))throw new Error('Ongeldig formaat');pirs=arr.map(p=>({id:p.id||uid(),q:p.q||'',owner:p.owner||'',due:p.due||'',status:p.status||'open'}));save();render();alert('Geïmporteerd: '+pirs.length)}catch(err){alert('Import mislukt: '+err.message)}ifile.value=''};r.readAsText(f)});
+  document.getElementById('resetPirs').addEventListener('click',()=>{if(!confirm('Alle PIRs wissen?'))return;pirs=[];save();render()});
+  render();
+})();
+</script>
+
+</body>
+</html>

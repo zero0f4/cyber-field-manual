@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Field Manual (CFM) — voor het Nederlandse MKB</title>
+  <meta name="description" content="Cyber Field Manual: helder uitleg-werkboek over cyber security &amp; threat intelligence voor het Nederlandse MKB — modellen, frameworks, acroniemen, werkbladen.">
+  <meta name="author" content="zero0f4">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+  <style>
+    .home-hero { text-align: center; padding: 48px 36px 28px; background: var(--bg-surface); border-bottom: 1px solid var(--border); }
+    .home-hero .hero-icon { font-size: 48px; color: var(--accent); margin-bottom: 12px; }
+    .home-hero h1 { font-size: 28px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+    .home-hero .hero-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .home-tagline { max-width: 680px; margin: 16px auto 0; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    .home-section-h { max-width: 1100px; margin: 36px auto 8px; padding: 0 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    .tile-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; max-width: 1100px; margin: 14px auto 24px; padding: 0 28px; }
+    .tile { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); text-decoration: none; color: var(--text-primary); transition: all .15s; }
+    .tile:hover { border-color: var(--accent); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .tile .tile-head { display: flex; align-items: center; gap: 10px; }
+    .tile .tile-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--accent-glow); color: var(--accent); display: flex; align-items: center; justify-content: center; }
+    .tile .tile-title { font-size: 14px; font-weight: 600; }
+    .tile .tile-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+    .tile .tile-tag { display: inline-block; font-size: 9px; padding: 2px 7px; border-radius: 999px; background: var(--bg-elevated); color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; }
+    details.home-disclaimer { margin: 32px auto 16px; max-width: 800px; background: rgba(234,179,8,0.06); border: 1px solid rgba(234,179,8,0.35); border-left: 3px solid #eab308; border-radius: var(--radius); font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
+    details.home-disclaimer strong { color: var(--text-primary); }
+    details.home-disclaimer summary.disc-title { list-style: none; cursor: pointer; padding: 12px 18px; display: flex; align-items: center; gap: 8px; color: #eab308; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; user-select: none; }
+    details.home-disclaimer summary.disc-title::-webkit-details-marker { display: none; }
+    details.home-disclaimer summary.disc-title::after { content: '▸'; margin-left: auto; font-size: 14px; transition: transform .15s; color: #eab308; }
+    details.home-disclaimer[open] summary.disc-title::after { transform: rotate(90deg); }
+    details.home-disclaimer .disc-toggle-hint { font-size: 10px; font-weight: 500; opacity: 0.7; text-transform: none; letter-spacing: 0; }
+    details.home-disclaimer[open] .disc-toggle-hint { display: none; }
+    details.home-disclaimer .disc-body { padding: 0 18px 16px; border-top: 1px dashed rgba(234,179,8,0.25); margin-top: 4px; padding-top: 12px; }
+    details.home-disclaimer ul { margin: 6px 0; padding-left: 18px; }
+    details.home-disclaimer ul li { margin-bottom: 3px; }
+    details.home-disclaimer:target { box-shadow: 0 0 0 3px rgba(234,179,8,0.25); }
+    .home-footer { text-align: center; font-size: 11px; color: var(--text-muted); padding: 24px; }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Field Manual</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="home-hero">
+      <div class="hero-icon" data-icon="eye" data-icon-size="48"></div>
+      <h1>Cyber Field Manual <span style="font-size:14px;font-family:var(--font-mono);color:var(--text-muted);font-weight:500;vertical-align:8px;margin-left:6px">(CFM)</span></h1>
+      <div class="hero-sub">Helder uitleg-werkboek · gericht op het Nederlandse MKB</div>
+      <p class="home-tagline">
+        Een praktisch veldboek dat cyber-vakkennis <strong>helder uitlegt</strong> en <strong>direct bruikbaar</strong> maakt.
+        Bedoeld voor ondernemers, IT-coördinatoren, security-officers en hun adviseurs in het Nederlandse MKB.
+        Bevat modellen (intelligence cycle, kill chains, MITRE ATT&amp;CK + D3FEND, Diamond, Pyramid of Pain),
+        analyse-methodieken (ACH, F3EAD, Admiralty), werkbladen (PIRs, hunting hypothesen, reporting templates) en
+        een uitgebreide acroniemen- en glossary-lijst.
+      </p>
+    </section>
+
+    <h2 class="home-section-h">Dreigingen — wie en hoe</h2>
+    <div class="tile-grid">
+      <a class="tile" href="threat-actors.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="actor" data-icon-size="18"></div><div class="tile-title">Threat Actors</div></div>
+        <div class="tile-desc">Motief-taxonomie + bekende APT/cybercrime-groepen + vendor-naamgeving (Bear/Panda/Typhoon).</div>
+        <span class="tile-tag">Naslag</span>
+      </a>
+      <a class="tile" href="aanvalstechnieken.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="attack" data-icon-size="18"></div><div class="tile-title">Aanvalstechnieken</div></div>
+        <div class="tile-desc">Hoe komen aanvallers binnen? Initial access, lateral movement en moderne MKB-patronen (BEC, RaaS, MFA-fatigue).</div>
+        <span class="tile-tag">MKB-praktijk</span>
+      </a>
+      <a class="tile" href="social-engineering.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="flag" data-icon-size="18"></div><div class="tile-title">Social Engineering</div></div>
+        <div class="tile-desc">Cialdini's 6 hefbomen, phishing-varianten (BEC, smishing, vishing, quishing), pretexting, deepfakes, helpdesk-fraude.</div>
+        <span class="tile-tag">MKB-praktijk</span>
+      </a>
+      <a class="tile" href="insider-threat.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="actor" data-icon-size="18"></div><div class="tile-title">Insider Threat</div></div>
+        <div class="tile-desc">MICE-model (Money/Ideology/Coercion/Ego), drie typen insiders, gedragssignalen + technische indicatoren, AVG-context.</div>
+        <span class="tile-tag">MKB-praktijk</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Aanvalsmodellen — hoe analyseer je het?</h2>
+    <div class="tile-grid">
+      <a class="tile" href="kill-chains.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="target" data-icon-size="18"></div><div class="tile-title">Kill Chains</div></div>
+        <div class="tile-desc">Lockheed Martin Cyber Kill Chain (per fase deepdive + Courses of Action), Mandiant Lifecycle, Unified Kill Chain (Pols, 18 fasen).</div>
+        <span class="tile-tag">Modellen</span>
+      </a>
+      <a class="tile" href="diamond.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="diamond" data-icon-size="18"></div><div class="tile-title">Diamond Model</div></div>
+        <div class="tile-desc">Adversary · Capability · Infrastructure · Victim — met 2 assen en 6 meta-features. Pivot-techniek.</div>
+        <span class="tile-tag">Theorie</span>
+      </a>
+      <a class="tile" href="attack.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="attack" data-icon-size="18"></div><div class="tile-title">MITRE ATT&amp;CK + D3FEND</div></div>
+        <div class="tile-desc">14 ATT&amp;CK-tactieken + sub-techniques, Mitigations, Data Sources; D3FEND als defensieve tegenhanger.</div>
+        <span class="tile-tag">Framework</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Wetgeving &amp; compliance</h2>
+    <div class="tile-grid">
+      <a class="tile" href="nis2.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="requirements" data-icon-size="18"></div><div class="tile-title">NIS2 &amp; Cyberbeveiligingswet</div></div>
+        <div class="tile-desc">EU-richtlijn voor cyber-weerbaarheid + NL-implementatie. Wie valt eronder, welke 10 maatregelen, meldtermijnen, bestuurdersaansprakelijkheid.</div>
+        <span class="tile-tag">Wetgeving</span>
+      </a>
+      <a class="tile" href="avg.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="requirements" data-icon-size="18"></div><div class="tile-title">AVG / GDPR</div></div>
+        <div class="tile-desc">Verwerkingsgrondslagen, datalek-meldplicht (72u), betrokkenrechten, DPIA, verwerkersovereenkomst.</div>
+        <span class="tile-tag">Wetgeving</span>
+      </a>
+      <a class="tile" href="dora.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="requirements" data-icon-size="18"></div><div class="tile-title">DORA</div></div>
+        <div class="tile-desc">Digital Operational Resilience Act voor financiële sector + ICT-leveranciers. 5 pijlers, TLPT, third-party.</div>
+        <span class="tile-tag">Wetgeving</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Verdediging</h2>
+    <div class="tile-grid">
+      <a class="tile" href="basismaatregelen.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="defend" data-icon-size="18"></div><div class="tile-title">Basismaatregelen MKB</div></div>
+        <div class="tile-desc">NCSC-checklist in 10 categorieën — concreet en afvinkbaar (identity, patching, backup, e-mail, EDR, logging, IR, awareness, leveranciers).</div>
+        <span class="tile-tag">Praktijk</span>
+      </a>
+      <a class="tile" href="backup.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="defend" data-icon-size="18"></div><div class="tile-title">Backup &amp; Ransomware</div></div>
+        <div class="tile-desc">3-2-1-1-0-regel · RTO/RPO · restore-test · ransomware-preparedness checklist.</div>
+        <span class="tile-tag">Praktijk</span>
+      </a>
+      <a class="tile" href="mfa-identity.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="tbb" data-icon-size="18"></div><div class="tile-title">MFA &amp; Identity</div></div>
+        <div class="tile-desc">Phishing-resistant MFA (FIDO2), Conditional Access, OAuth-consent risico, PAM/PIM voor admin-accounts.</div>
+        <span class="tile-tag">Praktijk</span>
+      </a>
+      <a class="tile" href="cloud-security.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="defend" data-icon-size="18"></div><div class="tile-title">Cloud Security</div></div>
+        <div class="tile-desc">Shared Responsibility · M365/Workspace top-10 hardening · IaaS basics · OAuth-consent-phish.</div>
+        <span class="tile-tag">Praktijk</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Incident &amp; risico</h2>
+    <div class="tile-grid">
+      <a class="tile" href="ir-proces.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="cycle" data-icon-size="18"></div><div class="tile-title">IR-proces &amp; meldplichten</div></div>
+        <div class="tile-desc">NIST 800-61 fasen · NL-meldketens (AP / NCSC / RDI / DNB) · containment-vuistregels · cyber-insurance.</div>
+        <span class="tile-tag">Proces</span>
+      </a>
+      <a class="tile" href="risk-management.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="gaps" data-icon-size="18"></div><div class="tile-title">Risk Management</div></div>
+        <div class="tile-desc">Kwalitatieve risk-matrix · top-15 MKB-risico's · 4 treatment-strategieën (vermijden/verminderen/overdragen/accepteren).</div>
+        <span class="tile-tag">Methode</span>
+      </a>
+      <a class="tile" href="tprm.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="sources" data-icon-size="18"></div><div class="tile-title">TPRM (leveranciers)</div></div>
+        <div class="tile-desc">Third-Party Risk Management · onboarding-due-diligence · contractuele clausules · NIS2-impact.</div>
+        <span class="tile-tag">Methode</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Indicatoren &amp; sharing</h2>
+    <div class="tile-grid">
+      <a class="tile" href="ioc.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="ioc" data-icon-size="18"></div><div class="tile-title">IoC Types</div></div>
+        <div class="tile-desc">Atomic, computed, behavioral · Pyramid of Pain · indicator-quality + lifecycle.</div>
+        <span class="tile-tag">Theorie</span>
+      </a>
+      <a class="tile" href="admiralty.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="scale" data-icon-size="18"></div><div class="tile-title">Source Evaluation</div></div>
+        <div class="tile-desc">Admiralty Code (NATO STANAG 2511) — bron-betrouwbaarheid (A-F) + informatie-geloofwaardigheid (1-6) met klikbaar grid.</div>
+        <span class="tile-tag">Methode</span>
+      </a>
+      <a class="tile" href="tlp.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="flag" data-icon-size="18"></div><div class="tile-title">TLP &amp; PAP</div></div>
+        <div class="tile-desc">Traffic Light Protocol 2.0 en MISP Permissible Actions Protocol — wie mag wat zien en doen.</div>
+        <span class="tile-tag">Sharing</span>
+      </a>
+      <a class="tile" href="sharing.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="sources" data-icon-size="18"></div><div class="tile-title">Sharing Standards</div></div>
+        <div class="tile-desc">STIX 2.1, TAXII, MISP-events, Sigma- en YARA-regels uitgelegd met voorbeelden.</div>
+        <span class="tile-tag">Standaard</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Intel-proces — werkwijze</h2>
+    <div class="tile-grid">
+      <a class="tile" href="intel-cycle.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="cycle" data-icon-size="18"></div><div class="tile-title">Intel Cycle</div></div>
+        <div class="tile-desc">Direction → Collection → Processing → Analysis → Dissemination → Feedback. Met PIR-werkblad.</div>
+        <span class="tile-tag">Proces</span>
+      </a>
+      <a class="tile" href="intel-types.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="eye" data-icon-size="18"></div><div class="tile-title">Intel Types</div></div>
+        <div class="tile-desc">Strategisch · Operationeel · Tactisch · Technisch — wie krijgt welk product?</div>
+        <span class="tile-tag">Theorie</span>
+      </a>
+      <a class="tile" href="analysis-methods.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="scale" data-icon-size="18"></div><div class="tile-title">Analysis Methods</div></div>
+        <div class="tile-desc">ACH, F3EAD, Sherman Kent's WEP, Heuer's SATs en de bekendste valkuilen.</div>
+        <span class="tile-tag">Methode</span>
+      </a>
+      <a class="tile" href="maturity.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="requirements" data-icon-size="18"></div><div class="tile-title">CTI Maturity</div></div>
+        <div class="tile-desc">SANS CTI Maturity + CTI-CMM — waar staat jouw programma?</div>
+        <span class="tile-tag">Volwassenheid</span>
+      </a>
+    </div>
+
+    <h2 class="home-section-h">Naslag</h2>
+    <div class="tile-grid">
+      <a class="tile" href="acronyms.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="glossary" data-icon-size="18"></div><div class="tile-title">Acroniemen</div></div>
+        <div class="tile-desc">100+ cyber- en IT-acroniemen voor MKB-NL: wetgeving (NIS2, AVG, DORA), frameworks, technologie. Filterbaar.</div>
+        <span class="tile-tag">Naslag</span>
+      </a>
+      <a class="tile" href="glossary.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="glossary" data-icon-size="18"></div><div class="tile-title">Glossary</div></div>
+        <div class="tile-desc">Concepten (zonder dubbeling met acroniemen): MICE, pretexting, pivoting, hunting, watering hole, ...</div>
+        <span class="tile-tag">Naslag</span>
+      </a>
+      <a class="tile" href="bronnen.html">
+        <div class="tile-head"><div class="tile-icon" data-icon="sources" data-icon-size="18"></div><div class="tile-title">Bronnen</div></div>
+        <div class="tile-desc">Frameworks, naslag, methodologie en maturity — directe links naar de officiële bronteksten.</div>
+        <span class="tile-tag">Naslag</span>
+      </a>
+    </div>
+
+    <details class="home-disclaimer" id="disclaimer">
+      <summary class="disc-title">
+        <span data-icon="gaps" data-icon-size="14"></span>
+        Disclaimer &amp; privacy <span class="disc-toggle-hint">— klap open</span>
+      </summary>
+      <div class="disc-body">
+        <p style="margin:0 0 8px 0">
+          De Cyber Field Manual (CFM) is een <strong>hulpmiddel</strong> en kan fouten, onvolledigheden of verkeerde interpretaties bevatten. Frameworks (MITRE ATT&amp;CK, D3FEND, FIRST, NATO) zijn aan verandering onderhevig en deze tool kan achterlopen op de actuele teksten.
+        </p>
+        <p style="margin:0 0 6px 0"><strong>De gebruiker is altijd zelf verantwoordelijk voor:</strong></p>
+        <ul>
+          <li><strong>Controle</strong> van inhoud tegen officiële bronteksten (MITRE, FIRST, NATO STANAG, vendor-rapporten).</li>
+          <li><strong>Toepassing</strong> binnen de eigen organisatie — TLP/PAP-besluiten, threat-attributie en operationele acties zijn altijd analist-gedreven.</li>
+          <li><strong>Professioneel oordeel</strong> bij intel-handelingen die mensen of organisaties kunnen raken.</li>
+          <li><strong>Eigen werkblad-data</strong> en backups (export-functies).</li>
+        </ul>
+        <p style="margin:0 0 8px 0">
+          Geen aansprakelijkheid voor schade of gevolgen voortvloeiend uit gebruik. Door de tool te gebruiken stemt u in met deze voorwaarden.
+        </p>
+        <p style="margin:0">
+          <strong>Privacy</strong> — deze tool draait volledig in je browser. Werkblad-data blijft lokaal in localStorage. Geen tracking, geen analytics, geen cookies.
+        </p>
+      </div>
+    </details>
+
+    <div class="home-footer">
+      Cyber Field Manual (CFM) v1.6 · by zero0f4 &middot; Build 2026-04-30 &middot; <a href="changelog.html" style="color:var(--accent);text-decoration:none">Wijzigingsblad</a>
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+<script>
+  // Open disclaimer als deze via #disclaimer is aangelinkt
+  if (location.hash === '#disclaimer') {
+    const d = document.getElementById('disclaimer');
+    if (d) d.open = true;
+  }
+  window.addEventListener('hashchange', () => {
+    if (location.hash === '#disclaimer') {
+      const d = document.getElementById('disclaimer'); if (d) d.open = true;
+    }
+  });
+</script>
+</body>
+</html>

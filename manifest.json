@@ -1,0 +1,10 @@
+{
+  "name": "Cyber Field Manual",
+  "short_name": "CFM",
+  "description": "Cyber Field Manual (CFM) — helder uitleg-werkboek over cyber security & threat intelligence voor het Nederlandse MKB",
+  "start_url": "home.html",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#dc2626",
+  "icons": []
+}

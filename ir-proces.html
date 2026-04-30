@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IR-proces &amp; meldplichten — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+</head>
+<body>
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">IR-proces &amp; meldplichten</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">IR-proces &amp; meldplichten</span>
+    </nav>
+    <div class="page-header">
+      <div>
+        <div class="page-title">IR-proces &amp; meldplichten</div>
+        <div class="page-subtitle">NIST 800-61 fasen · NL-meldketens (AP/NCSC/RDI/DNB) · containment-vuistregels</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> dit is uitleg, geen juridisch advies. Verifieer altijd tegen actuele bronteksten en raadpleeg een specialist bij twijfel. <a href="home.html#disclaimer" style="color:var(--accent)">Volledig.</a>
+        </div>
+      </div>
+    </div>
+    <a href="home.html" class="back-home-mobile"><span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home</a>
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}.warn{background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.35);border-left:3px solid var(--red);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}.checklist{list-style:none;padding-left:0}.checklist li{padding:4px 0 4px 26px;position:relative;line-height:1.6}.checklist li::before{content:"☐";position:absolute;left:0;color:var(--accent);font-size:14px}</style>
+<div class="manual-content">
+<section class="manual-section"><h2><span class="sec-num">01</span> NIST 800-61 — IR-fasen</h2>
+<p>De facto-standaard incidentresponse-cyclus, in 2024 herzien naar Rev. 3 met betere afstemming op CSF 2.0:</p>
+<div class="dm-cards">
+<div class="dm-card"><h4>1. Preparation</h4><p>Vóór er iets gebeurt: IR-plan, contactgegevens, tooling, training, runbooks, backups, awareness, oefeningen.</p></div>
+<div class="dm-card"><h4>2. Detection &amp; Analysis</h4><p>Een waarneming binnen → triage → bevestigen incident → impact en scope inschatten → categoriseren.</p></div>
+<div class="dm-card"><h4>3. Containment</h4><p>Korte termijn (host isoleren, account uitzetten) + lange termijn (segmentatie, geforceerde wachtwoord-reset).</p></div>
+<div class="dm-card"><h4>4. Eradication</h4><p>Aanvaller-aanwezigheid wegwerken: malware verwijderen, kwetsbaarheid patchen, accounts opnieuw provisionen.</p></div>
+<div class="dm-card"><h4>5. Recovery</h4><p>Systemen weer online, monitoring intensief tijdens herstel, validatie dat aanvaller weg is.</p></div>
+<div class="dm-card"><h4>6. Lessons Learned</h4><p>Post-mortem binnen 2 weken, root-cause, verbeteracties met eigenaar en deadline.</p></div>
+</div></section>
+
+<section class="manual-section"><h3>Triage in 30 seconden</h3>
+<ol>
+<li><b>Wat zie ik?</b> — het signaal, niet de interpretatie</li>
+<li><b>Wat raakt het?</b> — host, account, data, business-proces</li>
+<li><b>Hoe groot is het?</b> — één machine of veel? één gebruiker of organisatie-breed?</li>
+<li><b>Hoe urgent?</b> — actief gaande of historisch?</li>
+<li><b>Wat is mijn confidence?</b> — high/medium/low — verklaard</li>
+</ol></section>
+
+<section class="manual-section"><h3>Meldplichten Nederland — wie waarschuw je wanneer?</h3>
+<table class="section-table"><thead><tr><th>Type incident</th><th>Aan wie</th><th>Termijn</th></tr></thead><tbody>
+<tr><td>Datalek persoonsgegevens met risico</td><td>Autoriteit Persoonsgegevens (AP)</td><td>72u</td></tr>
+<tr><td>Datalek met hoog risico</td><td>+ Betrokkenen direct</td><td>z.s.m.</td></tr>
+<tr><td>NIS2-significant incident</td><td>NCSC / RDI / CSIRT-DSP</td><td>24u early warning, 72u melding, 1 mnd eindrapport</td></tr>
+<tr><td>DORA-major ICT incident</td><td>DNB / AFM</td><td>4u initial, 72u intermediate, 1 mnd final</td></tr>
+<tr><td>Strafbaar feit (afpersing, ransomware-betaling)</td><td>Politie / Cybercrime-team</td><td>z.s.m.</td></tr>
+<tr><td>Verzekeraar (cyber-policy)</td><td>Cyber-insurance</td><td>Conform polis (vaak 24-48u)</td></tr>
+<tr><td>Beursnotering</td><td>AFM (mogelijk koersgevoelig)</td><td>z.s.m.</td></tr>
+<tr><td>Klanten / leveranciers</td><td>Op basis van impact</td><td>Conform contract / passend</td></tr>
+</tbody></table></section>
+
+<section class="manual-section"><h3>Containment-vuistregels</h3>
+<ul>
+<li><b>Niet als reflex de stekker eruit</b> — eerst beslissen of forensische bewijsverzameling moet (memory-dump, disk-image)</li>
+<li>Account-revocatie + sessie-invalidatie + token-reset (alle drie!)</li>
+<li>Netwerk-isolatie via EDR (CrowdStrike Falcon Network Containment, Defender Live Response)</li>
+<li>Niet de aanvaller waarschuwen door zichtbaar tegenactie — als hij weet dat je weet dat hij weet, breekt hij sneller af</li>
+<li>Communiceer in een apart out-of-band kanaal (Signal, telefoon) — aanvaller leest waarschijnlijk je e-mail mee</li>
+</ul></section>
+
+<section class="manual-section"><h3>Cyber-insurance &amp; ransomware</h3>
+<div class="warn">Voor ransom betalen overweegt: check polis, contact verzekeraar, juridisch advies, sanctielijsten (OFAC). NL-overheidsstandpunt: niet betalen — financiert volgende aanval. Ook: na betaling werkt de decryptor in 30-60% van de gevallen niet of slecht.</div></section>
+
+<section class="manual-section"><h3>Tabletop-scenario's voor MKB</h3>
+<ul>
+<li>Ransomware op alle servers om 03:00 op zondag</li>
+<li>BEC: factuur-IBAN gewijzigd, €80k naar mule-account</li>
+<li>Datalek: laptop gestolen uit auto, ongeëncrypte HDD met klantdata</li>
+<li>Insider-vertrek: senior dev neemt klantenlijst mee naar concurrent</li>
+<li>MSP-compromittering: jouw IT-leverancier is gehackt, alle klanten getroffen</li>
+<li>DDoS op webshop tijdens Black Friday</li>
+</ul></section>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

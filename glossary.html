@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Glossary</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Glossary</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Glossary</div>
+        <div class="page-subtitle">Concepten uit de CTI-wereld (acroniem-lookups: zie Acroniemen-pagina)</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Glossary — concepten</h2>
+          <p>Conceptuele begrippen uit de cyber threat intelligence wereld. Voor losse acroniemen (afkortingen) zie de <a href="acronyms.html" style="color:var(--accent)">Acroniemen-pagina</a>; deze pagina behandelt concepten dieper en zonder dubbeling.</p>
+          <input type="text" id="glossarySearch" placeholder="Filter..." style="width:100%;max-width:420px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-surface);color:var(--text-primary);font-size:13px;margin-bottom:14px">
+          <dl id="glossaryList" style="font-size:13px;line-height:1.7"></dl>
+        </section>
+      </div>
+      <script>
+        const TERMS = [
+          ["Admiralty Code","NATO STANAG 2511 — twee-letter/cijfer-code om bron-betrouwbaarheid (A-F) en informatie-geloofwaardigheid (1-6) apart te scoren. Zie de <a href='admiralty.html' style='color:var(--accent)'>Source Evaluation</a>-pagina."],
+          ["Attribution","Het toewijzen van een aanval aan een specifieke actor. Geen vaststaande waarheid maar inschatting met confidence-niveau, gebaseerd op TTP-overlap, infrastructuur, taal/timing, OPSEC-fouten."],
+          ["Beacon","Periodieke check-in van een implant naar de C2-server. Detectie via interval-anomalie (te regelmatig is verdacht)."],
+          ["Bias (analytisch)","Systematische denkfout die de analyse verstoort: confirmation bias, anchoring, mirror imaging, group-think, recency bias, attribution rush. Zie <a href='analysis-methods.html' style='color:var(--accent)'>Analysis Methods</a>."],
+          ["Campaign","Gegroepeerde set intrusion-events met dezelfde achterliggende actor of intent over een tijdsperiode. Een actor kan meerdere campagnes draaien."],
+          ["Confidence","Inschatting van zekerheid (low / medium / high). Verplicht onderdeel van élke CTI-claim. Zie ook <em>Words of Estimative Probability</em> (Sherman Kent)."],
+          ["Diamond Model","Caltagirone, Pendergast &amp; Betz (2013) — analyse-model met 4 hoekpunten (Adversary, Capability, Infrastructure, Victim) + 2 assen + 6 meta-features. Zie <a href='diamond.html' style='color:var(--accent)'>Diamond Model</a>."],
+          ["F3EAD","Find — Fix — Finish — Exploit — Analyze — Disseminate. Actie-georiënteerde variant van de intel-cycle, vooral in IR/threat-hunting. Zie <a href='analysis-methods.html#f3ead' style='color:var(--accent)'>Analysis Methods</a>."],
+          ["Hunting","Proactief zoeken naar aanvaller-aanwezigheid op basis van een hypothese, in tegenstelling tot reactief alerts triagen. Zie <a href='hunting.html' style='color:var(--accent)'>Hunting Werkblad</a>."],
+          ["IoA vs IoC","<em>Indicator of Attack</em> (IoA) = gedrag dat wijst op een lopende aanval, vóór of zonder concrete artefacten. <em>Indicator of Compromise</em> (IoC) = observeerbaar artefact (hash, IP, domein) dat wijst op compromittering, vaak ná het feit."],
+          ["Kill Chain","Beschrijving van de fases van een gerichte aanval. Bekendste varianten: Lockheed Martin (7 fasen, 2011), Mandiant Attack Lifecycle (8), Unified Kill Chain (Pols, 18). Zie <a href='kill-chains.html' style='color:var(--accent)'>Kill Chains</a>."],
+          ["LOLBin / LOLBAS","<em>Living Off the Land Binaries / And Scripts</em> — misbruik van legitieme Windows-/Linux-tools (PowerShell, certutil, mshta, regsvr32, curl, wget) door aanvallers om onder de radar te blijven."],
+          ["MICE","Money — Ideology — Coercion — Ego. Klassiek motief-model voor kwaadwillende insiders (counter-intelligence). Zie <a href='insider-threat.html' style='color:var(--accent)'>Insider Threat</a>."],
+          ["Mitigation","Generieke verdedigingsmaatregel (M-IDs in MITRE ATT&amp;CK) die één of meer aanvalstechnieken blokkeert of bemoeilijkt. Bv. M1042 Disable or Remove Feature."],
+          ["Pivoting","Van één bekend hoekpunt (IoC, IP, hash, account) systematisch zoeken naar gerelateerde indicatoren — kerntechniek bij Diamond-Model-analyse en threat hunting."],
+          ["Pyramid of Pain","David Bianco (2013) — rangschikt IoC-typen naar pijn voor de aanvaller om eromheen te werken. Onderaan: hashes (triviaal). Bovenaan: TTPs (zeer pijnlijk)."],
+          ["Pretexting","Social-engineering-techniek waarbij de aanvaller een geloofwaardig verhaal (pretext) verzint en een rol speelt — leverancier, auditor, HR-medewerker. Zie <a href='social-engineering.html' style='color:var(--accent)'>Social Engineering</a>."],
+          ["Sighting","Telling per indicator van waar/wanneer waargenomen. Belangrijk voor MISP-uitwisseling — meervoudige sightings verhogen de waarde van een IoC."],
+          ["Threat Actor","Individu, groep of organisatie met de intentie en capaciteit om een cyberdreiging uit te voeren. Categorieën: state-sponsored, cybercrime, hacktivist, insider, terrorist, script-kiddie."],
+          ["TTP","<em>Tactics, Techniques and Procedures</em> — gestructureerde beschrijving van hoe een actor opereert. Hoogste niveau in de Pyramid of Pain; basis van MITRE ATT&amp;CK."],
+          ["Unified Kill Chain","Paul Pols (2017) — 18-fasen-model dat LM Cyber Kill Chain en Mandiant Attack Lifecycle integreert; mapt direct naar MITRE ATT&amp;CK-tactics."],
+          ["Victimology","Studie van slachtoffer-patronen — sectoren, regio's, asset-types — om actor-targeting te begrijpen en eigen risico in te schatten."],
+          ["VirusTotal","File / URL / IP / domain reputation lookup &amp; sandbox-aggregator (Google). Standaard voor enrichment van IoCs."],
+          ["Watering hole","Aanvalstype waarbij een website die het doelwit regelmatig bezoekt wordt gehackt — niet de gebruiker direct. Naam komt van het roofdier dat bij de waterput op prooi wacht."],
+          ["Words of Estimative Probability","Sherman Kent (CIA, 1964) — gestandaardiseerd waarschijnlijkheidsvocabulaire (almost certainly, highly likely, likely, ...) om analytische consistentie te borgen."]
+        ];
+        const root = document.getElementById('glossaryList');
+        const inp = document.getElementById('glossarySearch');
+        function render(){
+          const q = inp.value.toLowerCase().trim();
+          const filt = !q ? TERMS : TERMS.filter(([t,d]) => (t+' '+d).toLowerCase().indexOf(q)!==-1);
+          root.innerHTML = filt.map(([t,d]) => '<dt style="font-weight:700;color:var(--text-primary);margin-top:10px">'+t+'</dt><dd style="margin:0 0 8px 0;color:var(--text-secondary)">'+d+'</dd>').join('') || '<div style="color:var(--text-muted)">Geen termen gevonden.</div>';
+        }
+        inp.addEventListener('input', render);
+        render();
+      </script>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+</body>
+</html>

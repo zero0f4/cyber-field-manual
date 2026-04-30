@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insider Threat — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Insider Threat</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Insider Threat</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Insider Threat</div>
+        <div class="page-subtitle">MICE-model · Soorten insiders · Indicatoren · MKB-tips · AVG-context</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}.warn{background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.35);border-left:3px solid var(--red);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Wat is een insider threat?</h2>
+          <p>Een insider threat is een dreiging die <b>vanuit de eigen organisatie</b> ontstaat: medewerkers, oud-medewerkers, externen met toegang (consultants, schoonmaak, leveranciers met logische toegang). Belangrijk verschil met externe aanvallen: insiders hebben al <em>vertrouwen, kennis en toegang</em>.</p>
+        </section>
+
+        <section class="manual-section">
+          <h3>Drie typen insiders</h3>
+          <div class="dm-cards">
+            <div class="dm-card" style="border-left:3px solid var(--green)"><h4>Onbedoeld (negligent)</h4><p>Medewerker maakt een fout: phishing-klik, USB-stick verloren, gevoelige data per ongeluk publiek gezet, zwakke configuratie. <em>Geen kwade opzet, wel impact.</em></p></div>
+            <div class="dm-card" style="border-left:3px solid var(--red)"><h4>Kwaadwillend (malicious)</h4><p>Bewust schade berokkenen: data stelen voor concurrent, sabotage, fraude, lekken naar pers. Vaak gemotiveerd door MICE.</p></div>
+            <div class="dm-card" style="border-left:3px solid var(--orange)"><h4>Gecompromitteerd (compromised)</h4><p>Account is overgenomen door een externe aanvaller; voor systemen oogt het als "de medewerker" — maar daadwerkelijke handelingen komen van buiten.</p></div>
+          </div>
+          <div class="callout"><b>Verhouding:</b> uit Verizon DBIR &amp; CMU CERT-data: ~60% van insider-incidenten is <em>onbedoeld</em>. Train daar dus net zo hard op als op kwaadwillende motieven.</div>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">02</span> MICE — motivatie van kwaadwillende insiders</h2>
+          <p>Klassiek model uit de spionage-/inlichtingen-wereld om te begrijpen waarom mensen interne kennis verraden. Veel gebruikt door <em>counterintelligence</em>-functionarissen (FBI, CIA, NATO).</p>
+          <table class="section-table"><thead><tr><th style="width:60px">Letter</th><th style="width:140px">Motief</th><th>Wat het is</th></tr></thead><tbody>
+            <tr><td><b style="color:var(--yellow)">M</b></td><td>Money / geld</td><td>Schulden, gokken, dure scheiding, inkomensdaling, omkoping. Veruit het meest voorkomende motief.</td></tr>
+            <tr><td><b style="color:var(--red)">I</b></td><td>Ideology / ideologie</td><td>Politieke, religieuze of morele overtuiging dat lekken het juiste is. Klokkenluiders, hacktivisme.</td></tr>
+            <tr><td><b style="color:var(--orange)">C</b></td><td>Coercion / dwang</td><td>Chantage: aanvaller heeft compromat, dreigt familie, of dwingt via cyber-stalking.</td></tr>
+            <tr><td><b style="color:var(--purple)">E</b></td><td>Ego / wraak</td><td>Wraak na conflict, afgewezen promotie, ontslag. Of: bewijzen "kijk wat ik kan".</td></tr>
+          </tbody></table>
+          <h3>Uitbreidingen: MICE-RC</h3>
+          <ul>
+            <li><b>R — Revenge</b>: ego en wraak gescheiden — wraak vaak na ontslag of officiële berisping.</li>
+            <li><b>C — Compromise</b>: subtiele variant van Coercion, meer "verstrengeling" dan harde chantage.</li>
+          </ul>
+          <p><b>MERIT-model</b> (CMU CERT): Money, Ego, Revenge, Ideology, Thrill — voegt "thrill seeking" toe als motief, vooral bij jonge insiders met technische skills.</p>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">03</span> Indicatoren — gedragsmatig &amp; technisch</h2>
+          <h3>Gedragssignalen (HR-zicht)</h3>
+          <ul>
+            <li>Onverklaarde welstand (nieuwe auto, dure aankopen) na financiële stress.</li>
+            <li>Conflicten op het werk, frustratie, vermijding van leidinggevenden.</li>
+            <li>Aankomende ontslag-aankondiging of einde contract.</li>
+            <li>Herhaalde negatieve uitlatingen over werkgever extern (LinkedIn, social).</li>
+            <li>Werken op ongebruikelijke uren, weigering vakantie te nemen.</li>
+            <li>Plotselinge interesse in gegevens buiten eigen werkgebied.</li>
+          </ul>
+          <h3>Technische signalen (IT/security-zicht)</h3>
+          <ul>
+            <li>Veel meer downloads dan normaal in de laatste weken voor vertrek.</li>
+            <li>Toegang tot bestanden buiten eigen functiegebied.</li>
+            <li>Gebruik van persoonlijke cloud-opslag (Dropbox, Drive) op werk-PC.</li>
+            <li>USB-storage gebruik, vooral op laatste werkdagen.</li>
+            <li>Pogingen om audit-logs te wissen, accounts te wijzigen.</li>
+            <li>Inloggen vanaf ongebruikelijke locaties / tijdstippen.</li>
+            <li>E-mail naar persoonlijk adres met gevoelige bijlagen.</li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">04</span> Wat helpt — concreet voor MKB</h2>
+          <ul>
+            <li><b>Least privilege</b> — niet iedereen heeft alles nodig. Standaard <em>nee</em> bij toegangsverzoeken.</li>
+            <li><b>Joiner-Mover-Leaver-process</b> — toegang automatisch in/uit zetten bij rolwissel of vertrek; niet handmatig vergeten.</li>
+            <li><b>4-eyes-principe</b> bij high-impact-acties: financiële betalingen, productie-changes, data-export, account-aanmaak.</li>
+            <li><b>Logging &amp; review</b> van priv-account-gebruik (PAM-oplossing).</li>
+            <li><b>DLP-policy</b> voor downloads naar persoonlijke storage en USB.</li>
+            <li><b>Exit-procedure</b> — laatste werkdag: toegang direct intrekken, devices teruggeven, mailbox afgeschermd.</li>
+            <li><b>Geen "alle macht in één persoon"</b> — een SPOF in IT met admin-rechten op alle systemen is een organisatorisch risico.</li>
+            <li><b>Open meldcultuur</b> — medewerkers durven onregelmatigheden te melden zonder represailles. Vaak weet de directe collega het eerder dan IT.</li>
+            <li><b>HR + IT samenwerken</b> — HR-signalen (conflict, vertrek, prestatieproblemen) zijn voor security relevant zonder details te lekken.</li>
+          </ul>
+          <div class="warn"><b>Privacy-let-op (NL/AVG):</b> monitoring van medewerkers vereist een rechtmatige grondslag, transparantie (vooraf gecommuniceerd in personeelsreglement), en proportionaliteit. Overleg met FG/DPO en OR. Geen "spyware" zonder kader.</div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+</body>
+</html>

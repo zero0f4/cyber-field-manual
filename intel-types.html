@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intel Types — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Intel Types</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Intel Types</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Intel Types</div>
+        <div class="page-subtitle">Strategisch · Operationeel · Tactisch · Technisch</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px;display:flex;align-items:center;gap:6px}.dm-card .dot{display:inline-block;width:10px;height:10px;border-radius:50%}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.kv-row{display:flex;gap:10px;margin:4px 0}.kv-row b{min-width:140px;color:var(--text-primary)}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Vier niveaus van threat intelligence</h2>
+          <p>Niet elke afnemer heeft hetzelfde nodig. CTI wordt klassiek opgedeeld in 4 niveaus, oplopend in technisch detail en aflopend in tijdshorizon.</p>
+        </section>
+        <section class="manual-section">
+          <table class="section-table">
+            <thead><tr><th>Niveau</th><th>Audience</th><th>Tijdshorizon</th><th>Product / vorm</th><th>Voorbeeld</th></tr></thead>
+            <tbody>
+              <tr><td><b style="color:var(--purple)">Strategisch</b></td><td>RvB, CISO, beleid</td><td>maanden — jaren</td><td>Sector-rapport, jaarbeeld, geopolitieke briefing, risico-trends</td><td>"Pro-Russische APT-clusters verleggen focus naar zorgsector NL"</td></tr>
+              <tr><td><b style="color:var(--accent)">Operationeel</b></td><td>SOC-management, IR-lead</td><td>weken — maanden</td><td>Campagne-rapport, threat actor-profiel, kill-chain-analyse</td><td>"APT29-campagne X gebruikt Y-malware tegen IT-providers"</td></tr>
+              <tr><td><b style="color:var(--green)">Tactisch</b></td><td>Detectie-engineers, hunters</td><td>dagen — weken</td><td>TTP-beschrijving, Sigma/YARA-regels, ATT&amp;CK-mapping</td><td>"T1053.005 (scheduled tasks) misbruikt door X — detectie-regel bijgevoegd"</td></tr>
+              <tr><td><b style="color:var(--yellow)">Technisch</b></td><td>SOC-analisten, EDR/SIEM</td><td>uren — dagen</td><td>IoC-feed (hashes/IPs/domeinen), STIX-bundle</td><td>"Block IP 1.2.3.4 — C2 voor Cobalt Strike"</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            <b>Vuistregel:</b> hoe technischer het product, hoe vluchtiger de waarde. Hashes (technisch) verouderen in dagen, TTPs (tactisch) in maanden, geopolitieke trends (strategisch) in jaren. Dit komt overeen met Bianco's Pyramid of Pain — zie <a href="ioc.html" style="color:var(--accent)">IoC Types</a>.
+          </div>
+        </section>
+        <section class="manual-section">
+          <h3>Producttypen per niveau</h3>
+          <ul>
+            <li><b>Strategisch:</b> annual threat assessment, sector-bedreigingsbeeld, geopolitieke briefing, M&amp;A-due-diligence-input.</li>
+            <li><b>Operationeel:</b> campagne-rapport, threat-actor-dossier, victimology-analyse, IOC-cluster.</li>
+            <li><b>Tactisch:</b> TTP-deepdive, hunt-package, detection engineering brief, purple-team-emulation plan.</li>
+            <li><b>Technisch:</b> machine-readable IoC-feed (STIX/CSV/JSON), MISP-event, sandbox-rapport, sample-hash-set.</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

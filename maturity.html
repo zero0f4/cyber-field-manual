@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTI Maturity — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Maturity</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">CTI Maturity</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">CTI Maturity</div>
+        <div class="page-subtitle">SANS CTI Maturity Model · CTI-CMM · groeimetrieken</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px;display:flex;align-items:center;gap:6px}.dm-card .dot{display:inline-block;width:10px;height:10px;border-radius:50%}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.kv-row{display:flex;gap:10px;margin:4px 0}.kv-row b{min-width:140px;color:var(--text-primary)}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Waarom volwassenheid meten?</h2>
+          <p>Een CTI-functie groeit niet vanzelf. Een maturity-model helpt je realistisch positioneren, gaps vinden, en aan stakeholders uitleggen waarom je investeert. Twee veelgebruikte modellen:</p>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">02</span> SANS CTI Maturity Model</h2>
+          <p>Vier niveaus voor een CTI-programma:</p>
+          <table class="section-table"><thead><tr><th>Niveau</th><th>Naam</th><th>Kenmerken</th></tr></thead><tbody>
+            <tr><td><b>0</b></td><td>Initial / Ad-hoc</td><td>Geen formele CTI-functie. Reactieve incidentbestrijding. Indien intel: van vendor-feeds, geen verwerking.</td></tr>
+            <tr><td><b>1</b></td><td>Preliminary</td><td>Een (deeltijd-)analist. Externe feeds met basale enrichment. Geen PIRs, geen feedback-loop.</td></tr>
+            <tr><td><b>2</b></td><td>Emerging</td><td>Klein team. PIRs gedefinieerd. Eigen rapportage. Begin met threat actor-profiling. ATT&amp;CK in gebruik.</td></tr>
+            <tr><td><b>3</b></td><td>Mature</td><td>Volwaardig team. Strategisch + operationeel + tactisch + technisch product. ISAC-deelname. Hunting-programma. SOC ↔ CTI ↔ IR-feedback.</td></tr>
+            <tr><td><b>4</b></td><td>Optimizing</td><td>Eigen onderzoek &amp; publicaties. Cross-org &amp; cross-sector intel-fusion. Predictive analytics. Industry-thought-leader.</td></tr>
+          </tbody></table>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">03</span> CTI Capability Maturity Model (CTI-CMM)</h2>
+          <p>Detail-model met assen:</p>
+          <ul>
+            <li><b>Stakeholders &amp; PIRs</b> — zijn de afnemers bekend? PIRs gedefinieerd?</li>
+            <li><b>Collection</b> — gestructureerde collection plan? Diversiteit aan bronnen?</li>
+            <li><b>Processing &amp; production</b> — gestandaardiseerde formats (STIX/MISP)? Confidence-scoring?</li>
+            <li><b>Analysis</b> — gestructureerde technieken (ACH, SATs)? Peer-review?</li>
+            <li><b>Dissemination</b> — feedback-loop met afnemers? Meting van waarde?</li>
+            <li><b>Tooling</b> — TIP / MISP / STIX / ATT&amp;CK Navigator / Sigma in gebruik?</li>
+            <li><b>People</b> — vaste rollen (analist, hunter, manager)? Training?</li>
+            <li><b>Governance</b> — policies, TLP/PAP-discipline, kwaliteitssysteem?</li>
+          </ul>
+          <p>Voor elke as scoor je 0-4, en bouwt een radar-grafiek om gaps zichtbaar te maken.</p>
+        </section>
+
+        <section class="manual-section">
+          <h3>Indicatoren voor groei</h3>
+          <ul>
+            <li>Tijd van waarneming → eerste IoC in detection-stack (mean time to detect-rule).</li>
+            <li>% PIRs beantwoord per kwartaal.</li>
+            <li>Aantal eigen geproduceerde rapporten vs. geconsumeerde feeds.</li>
+            <li>ATT&amp;CK-coverage van detection-stack (% techniques met ≥1 detection).</li>
+            <li>Aantal hunting-hypotheses → bewijs gevonden ratio.</li>
+            <li>Stakeholder-tevredenheid (kwartaal-survey).</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

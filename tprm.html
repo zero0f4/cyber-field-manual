@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPRM (leveranciers) — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+</head>
+<body>
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">TPRM (leveranciers)</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">TPRM (leveranciers)</span>
+    </nav>
+    <div class="page-header">
+      <div>
+        <div class="page-title">TPRM (leveranciers)</div>
+        <div class="page-subtitle">Third-Party Risk Management · onboarding · contracten · monitoring</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> dit is uitleg, geen juridisch advies. Verifieer altijd tegen actuele bronteksten en raadpleeg een specialist bij twijfel. <a href="home.html#disclaimer" style="color:var(--accent)">Volledig.</a>
+        </div>
+      </div>
+    </div>
+    <a href="home.html" class="back-home-mobile"><span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home</a>
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}.warn{background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.35);border-left:3px solid var(--red);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}.checklist{list-style:none;padding-left:0}.checklist li{padding:4px 0 4px 26px;position:relative;line-height:1.6}.checklist li::before{content:"☐";position:absolute;left:0;color:var(--accent);font-size:14px}</style>
+<div class="manual-content">
+<section class="manual-section"><h2><span class="sec-num">01</span> Wat is TPRM?</h2>
+<p>Third-Party Risk Management — het beheren van risico's die ontstaan doordat je leveranciers, partners of dienstverleners gebruikt die toegang hebben tot je systemen of data. NIS2 maakt dit expliciet verplicht voor entities-in-scope; voor andere MKB onmisbaar als basis-hygiëne.</p></section>
+
+<section class="manual-section"><h3>Soorten leveranciersrisico</h3>
+<ul>
+<li><b>Cyber</b> — ransomware bij leverancier raakt jou (zoals Kaseya 2021)</li>
+<li><b>Privacy</b> — leverancier verwerkt persoonsgegevens onveilig (datalek bij hen → jouw meldplicht)</li>
+<li><b>Compliance</b> — leverancier voldoet niet aan ISO 27001 / SOC 2 / NIS2 → jouw audit faalt</li>
+<li><b>Continuïteit</b> — leverancier failliet of overgenomen → exit-uitdaging</li>
+<li><b>Geopolitiek</b> — leverancier in sanctie-regio of geopolitiek conflict</li>
+<li><b>Concentratie</b> — te afhankelijk van één leverancier zonder alternatief</li>
+</ul></section>
+
+<section class="manual-section"><h3>Stappenplan voor MKB</h3>
+<ol>
+<li><b>Inventariseer</b> alle ICT-leveranciers + welke data/toegang ze hebben.</li>
+<li><b>Classificeer</b> per leverancier: kritiek / belangrijk / standaard. Kritisch = uitval raakt direct je primaire proces of betreft gevoelige data.</li>
+<li><b>Onboarding-due-diligence</b> per nieuwe (kritieke) leverancier:
+  <ul>
+  <li>Beveiligingsvragenlijst (CAIQ-Lite, eigen template)</li>
+  <li>Bewijs van ISO 27001 / SOC 2 Type II / equivalent</li>
+  <li>Pen-test rapport laatste 12 maanden</li>
+  <li>Verzekering (cyber + aansprakelijkheid)</li>
+  <li>Incident-procedure + meldtermijn</li>
+  </ul>
+</li>
+<li><b>Contractueel</b> vastleggen:
+  <ul>
+  <li>Audit-recht (minimaal SOC 2-rapport jaarlijks)</li>
+  <li>Meldplicht incidenten binnen X uur</li>
+  <li>Subprocessor-toestemming</li>
+  <li>Data-locatie (EU/EER voor persoonsgegevens)</li>
+  <li>Exit-clausule + data-retour-formaat</li>
+  <li>SLA met boetes bij overschrijding</li>
+  <li>AVG-verwerkersovereenkomst (waar van toepassing)</li>
+  </ul>
+</li>
+<li><b>Periodiek monitoren</b>:
+  <ul>
+  <li>Jaarlijkse herbeoordeling kritieke leveranciers</li>
+  <li>News-monitoring op breaches (Have I Been Pwned, BreachForums-waarschuwingen)</li>
+  <li>Sub-leveranciers bewaken (4th party)</li>
+  </ul>
+</li>
+<li><b>Exit-readiness</b>: heb je een plan B? Hoe lang om te switchen?</li>
+</ol></section>
+
+<section class="manual-section"><h3>Beveiligingsvragenlijst — kern-vragen</h3>
+<ul>
+<li>Heb je een ISMS volgens ISO 27001 of equivalent?</li>
+<li>Hoe is jullie identity &amp; access management georganiseerd? MFA verplicht?</li>
+<li>Welke logging, monitoring en SOC-capaciteit heb je?</li>
+<li>Patchmanagement-procedure en SLA's?</li>
+<li>Backup &amp; restore-test frequentie?</li>
+<li>Datalek-procedure en meldtermijn richting klanten?</li>
+<li>Subverwerkers in productie-ketting?</li>
+<li>Pen-test-frequentie en wie voert uit?</li>
+<li>BCP/DRP getest?</li>
+<li>Hoe ga je om met data-locatie (EU/EER)?</li>
+</ul></section>
+
+<section class="manual-section"><h3>NIS2 — TPRM-impact</h3>
+<p>Artikel 21(2)(d) NIS2: <em>"supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers"</em>.</p>
+<p>Lees: ook al ben je niet zelf in scope, je <em>klanten</em> die wel in scope zijn moeten <b>jou</b> beoordelen. Verwacht security-questionnaires en audit-verzoeken.</p></section>
+</div>
+
+    </div>
+  </main>
+</div>
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

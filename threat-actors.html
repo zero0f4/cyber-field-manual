@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Threat Actors — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Actors</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Threat Actors</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Threat Actors</div>
+        <div class="page-subtitle">Motief-taxonomie + bekende APT- en cybercrime-groepen + vendor-naamgeving</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px;display:flex;align-items:center;gap:6px}.dm-card .dot{display:inline-block;width:10px;height:10px;border-radius:50%}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.kv-row{display:flex;gap:10px;margin:4px 0}.kv-row b{min-width:140px;color:var(--text-primary)}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Threat actor — wat en waarom</h2>
+          <p>Een threat actor is een individu, groep of organisatie met de intentie en capaciteit om een cyberdreiging uit te voeren. Attributie is een inschatting met confidence, geen vaststaande waarheid — verifieer met meerdere bronnen.</p>
+        </section>
+
+        <section class="manual-section">
+          <h3>Motief-taxonomie</h3>
+          <table class="section-table"><thead><tr><th>Type</th><th>Motief</th><th>Doelwit</th><th>Voorbeeld</th></tr></thead><tbody>
+            <tr><td><b style="color:var(--red)">State-sponsored APT</b></td><td>Espionage, disruptie, beïnvloeding</td><td>Overheid, defense, kritieke infra</td><td>APT28, APT29, Lazarus, APT41</td></tr>
+            <tr><td><b style="color:var(--orange)">Cybercrime</b></td><td>Financieel gewin</td><td>Banken, retail, MKB, healthcare</td><td>FIN7, Conti, LockBit, Black Basta</td></tr>
+            <tr><td><b style="color:var(--yellow)">Hacktivist</b></td><td>Politiek, ideologisch</td><td>Bedrijven, regeringen passend bij agenda</td><td>Anonymous, KillNet, IT-Army-of-Ukraine</td></tr>
+            <tr><td><b style="color:var(--purple)">Insider</b></td><td>Wraak, financieel, beïnvloeding</td><td>Eigen werkgever</td><td>Ex-werknemer met admin-rechten, afgeperste medewerker</td></tr>
+            <tr><td><b style="color:var(--cyan)">Terrorist</b></td><td>Maatschappelijke ontwrichting</td><td>Symbolische / kritieke targets</td><td>Cyber-terror cells (zeldzaam in praktijk)</td></tr>
+            <tr><td><b style="color:var(--text-secondary)">Script kiddie</b></td><td>Status, nieuwsgierigheid</td><td>Toevallig kwetsbare systemen</td><td>Off-the-shelf tools, geen targeting</td></tr>
+          </tbody></table>
+        </section>
+
+        <section class="manual-section">
+          <h3>Bekende groepen (snelnaslag)</h3>
+          <table class="section-table"><thead><tr><th>Groep</th><th>Aliassen</th><th>Type</th><th>Regio</th><th>Typisch</th></tr></thead><tbody>
+            <tr><td><b>APT28</b></td><td>Fancy Bear, Sofacy, Pawn Storm, Strontium</td><td style="color:var(--red)">State (GRU)</td><td>RU</td><td>Spear-phish, X-Agent, NATO/defense, electioneering</td></tr>
+            <tr><td><b>APT29</b></td><td>Cozy Bear, NOBELIUM, Midnight Blizzard, The Dukes</td><td style="color:var(--red)">State (SVR)</td><td>RU</td><td>SolarWinds, supply-chain, langdurig stealth</td></tr>
+            <tr><td><b>Lazarus Group</b></td><td>HIDDEN COBRA, APT38, Diamond Sleet</td><td style="color:var(--red)">State</td><td>KP</td><td>Financial heists, crypto-exchange, WannaCry, 3CX</td></tr>
+            <tr><td><b>APT41</b></td><td>Winnti, Barium, Wicked Panda, Brass Typhoon</td><td style="color:var(--red)">State + crime</td><td>CN</td><td>Dual-use: espionage + financial; supply chain</td></tr>
+            <tr><td><b>APT40</b></td><td>Leviathan, Bronze Mohawk, Gingham Typhoon</td><td style="color:var(--red)">State (MSS)</td><td>CN</td><td>Maritime, defense, gov, academia</td></tr>
+            <tr><td><b>APT35</b></td><td>Charming Kitten, Phosphorus, Mint Sandstorm</td><td style="color:var(--red)">State (IRGC)</td><td>IR</td><td>Spear-phish journalisten, dissidenten, gov</td></tr>
+            <tr><td><b>FIN7</b></td><td>Carbanak Group, Sangria Tempest</td><td style="color:var(--orange)">Crime</td><td>RU/UA</td><td>PoS-malware, retail/horeca, Carbanak/Cobalt Strike</td></tr>
+            <tr><td><b>LockBit</b></td><td>LockBit 2.0/3.0, Bitwise Spider</td><td style="color:var(--orange)">RaaS</td><td>Diverse</td><td>Ransomware-as-a-service, double extortion</td></tr>
+            <tr><td><b>Conti / Black Basta</b></td><td>Wizard Spider, Storm-1811</td><td style="color:var(--orange)">Crime</td><td>RU</td><td>Ransomware kritieke infra, gezondheidszorg</td></tr>
+            <tr><td><b>TA505</b></td><td>Hive0065, FIN11</td><td style="color:var(--orange)">Crime</td><td>RU/UA</td><td>Massa-phishing, Dridex, Locky, Clop</td></tr>
+          </tbody></table>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:8px">Authoritative: <a href="https://attack.mitre.org/groups/" target="_blank" style="color:var(--accent)">MITRE ATT&amp;CK Groups</a> · <a href="https://malpedia.caad.fkie.fraunhofer.de/" target="_blank" style="color:var(--accent)">Malpedia</a> · <a href="https://thaicert.or.th/threat-group-cards/" target="_blank" style="color:var(--accent)">ThaiCERT TGC</a>.</p>
+        </section>
+
+        <section class="manual-section">
+          <h3>Naamgeving — vendor-glossarium</h3>
+          <p>Elke vendor hanteert eigen naamgeving — vaak een dier of weersfenomeen.</p>
+          <ul>
+            <li><b>CrowdStrike</b>: dieren per nationaliteit (Bear=RU, Panda=CN, Kitten=IR, Chollima=KP, Spider=crime).</li>
+            <li><b>Microsoft</b>: weer per type (Blizzard=RU state, Typhoon=CN, Sandstorm=IR, Sleet=KP, Tempest=crime, Tsunami=influence).</li>
+            <li><b>Mandiant</b>: APT-nummering (APT1, APT29, ...) of UNC-clusters voor onbevestigd.</li>
+            <li><b>Recorded Future</b>: TAG-nummering (TAG-22, TAG-100, ...).</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

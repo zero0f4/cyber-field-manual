@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wijzigingsblad — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Wijzigingsblad</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Wijzigingsblad</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Wijzigingsblad</div>
+        <div class="page-subtitle">Versies en wijzigingen</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+
+      <style>
+        .cl-entry { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px 20px; margin-bottom: 18px; border-left: 3px solid var(--accent); }
+        .cl-entry.current { border-left-color: var(--green); }
+        .cl-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+        .cl-version { font-family: var(--font-mono); font-size: 18px; font-weight: 700; color: var(--text-primary); }
+        .cl-entry.current .cl-version { color: var(--green); }
+        .cl-date { font-size: 12px; color: var(--text-muted); font-family: var(--font-mono); }
+        .cl-tag { font-size: 10px; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+        .cl-tag.now { background: rgba(34,197,94,0.12); color: var(--green); border: 1px solid rgba(34,197,94,0.35); }
+        .cl-tag.prev { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border); }
+        .cl-section h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin: 10px 0 6px 0; font-weight: 600; }
+        .cl-section ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.7; color: var(--text-secondary); }
+        .cl-cat { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 4px; font-family: var(--font-mono); margin-right: 6px; vertical-align: 1px; }
+        .cl-cat.feat { background: rgba(37,99,235,0.10); color: var(--accent); }
+        .cl-cat.docs { background: rgba(139,92,246,0.10); color: var(--purple); }
+      </style>
+      <div class="manual-content">
+        <div class="cl-entry current">
+          <div class="cl-head">
+            <span class="cl-version">v1.6</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag now">Huidig</span>
+          </div>
+          <div class="cl-section">
+            <h4>Tijdelijk verwijderd</h4>
+            <ul>
+              <li><span class="cl-cat docs">DOC</span> <b>Werkbladen-sectie</b> (Hunting, Reporting Templates, Risico-register, Incident-logboek, Awareness-tracker) tijdelijk verwijderd. Worden in een latere versie opnieuw toegevoegd, vermoedelijk in herwerkte vorm of als losse werkbladen-app.</li>
+              <li><span class="cl-cat feat">FEAT</span> Sidebar Werkbladen-sectie verwijderd uit alle 31 pagina's; home tile-grid sectie verwijderd.</li>
+              <li><span class="cl-cat feat">FEAT</span> Service-worker bumped naar <code>cyber-field-manual-v7</code>; werkblad-pagina's uit precache.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry">
+          <div class="cl-head">
+            <span class="cl-version">v1.5</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag prev">Eerder</span>
+          </div>
+          <div class="cl-section">
+            <h4>Verwijderd</h4>
+            <ul>
+              <li><span class="cl-cat docs">DOC</span> <b>Satire-sectie verwijderd</b>. CFM houdt uitsluitend serieuze MKB-content.</li>
+              <li><span class="cl-cat docs">DOC</span> Sidebar opgeschoond — Satire-sectie verwijderd uit alle 36 pagina's.</li>
+              <li><span class="cl-cat docs">DOC</span> Home-tile-grid: kleine cross-link naar CHL (in plaats van satire-tegels).</li>
+              <li><span class="cl-cat feat">FEAT</span> Service-worker bumped naar <code>cyber-field-manual-v6</code>; 4 satire-pagina's verwijderd uit precache.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry">
+          <div class="cl-head">
+            <span class="cl-version">v1.4</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag prev">Eerder</span>
+          </div>
+          <div class="cl-section">
+            <h4>Toegevoegd — Satire-sectie</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> Nieuwe sidebar-sectie <b>Satire</b> die de bingo verzamelt met drie nieuwe generators.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Vendor-slogan-generator</b> — random vendor-pitch (twee adjectieven × productcategorie × benefit × tagline). 16 × 16 × 12 × 9 combinaties + pool-tabel.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>APT-naamgenerator</b> — CrowdStrike-stijl met dier per nationaliteit, Microsoft-storm-alias, vermoed motief en confidence-niveau. Inclusief uitleg-tabel van het naam-schema.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>CISO-excuses-generator</b> — random Nederlandstalig incident-statement uit zes componenten (subject/werkwoord/dreiging/vector/bijzin/geruststelling) — herkenbaar voor wie ooit een post-mortem heeft horen voordragen.</li>
+            </ul>
+            <h4>Aangepast</h4>
+            <ul>
+              <li><span class="cl-cat docs">DOC</span> Satire-pagina's getrokken in <em>FNC/CFM-stijl</em>: <code>manual-content</code> + <code>manual-section</code> wrappers, sec-num headings, <code>section-table</code> voor pools — consistent met de rest van de tool.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Bullshit Bingo</b>-pool uitgebreid met onderzochte cyber-buzzwoorden (RSA/Gartner/Forrester/CISO-Series-bronnen) + ~43 typisch Nederlandse buzz ("De keten is zo sterk als de zwakste schakel", "We ontzorgen u", "MKB-proof", etc.).</li>
+              <li><span class="cl-cat feat">FEAT</span> Bingo FREE SPACE vervangen door <code>ZERO0F4</code> in monospace.</li>
+              <li><span class="cl-cat feat">FEAT</span> Service-worker bumped naar <code>cyber-field-manual-v5</code>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry">
+          <div class="cl-head">
+            <span class="cl-version">v1.3</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag prev">Eerder</span>
+          </div>
+          <div class="cl-section">
+            <h4>Toegevoegd — Wetgeving &amp; compliance</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>NIS2 &amp; Cyberbeveiligingswet</b> — wie valt eronder, 4 pijlers, de 10 verplichte beveiligingsmaatregelen, meldtermijnen (24/72u/1mnd), bestuurdersaansprakelijkheid, NL-implementatie.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>AVG / GDPR</b> — kernprincipes, 6 verwerkingsgrondslagen, 72u-datalek-procedure, betrokkenenrechten, DPIA, verwerkersovereenkomst, FG-aanstelling.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>DORA</b> — Digital Operational Resilience Act voor financiële sector + 5 pijlers + impact op MKB-IT-leveranciers.</li>
+            </ul>
+            <h4>Toegevoegd — Verdediging</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>Basismaatregelen MKB</b> — NCSC-checklist in 10 categorieën (afvinkbaar): inventarisatie, identity, patching, backup, e-mail, endpoint/netwerk, logging, IR, mens, leveranciers.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Backup &amp; Ransomware</b> — 3-2-1-1-0-regel, RTO/RPO, immutable/air-gapped, restore-test, ransomware-preparedness.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>MFA &amp; Identity</b> — phishing-resistant MFA-typen vergeleken, Conditional Access, OAuth-consent risico, PAM/PIM-best-practices, wachtwoordbeleid 2025+.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Cloud Security</b> — Shared Responsibility-matrix, M365/Workspace top-10 hardening, IaaS basics, OAuth-consent-phishing.</li>
+            </ul>
+            <h4>Toegevoegd — Incident &amp; risico</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>IR-proces &amp; meldplichten</b> — NIST 800-61 fasen, NL-meldketens (AP / NCSC / RDI / DNB / cyber-insurance), containment-vuistregels, ransomware-betalingsadvies, MKB-tabletop-scenario's.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Risk Management</b> — kwalitatieve risk-matrix (5×5), top-15 MKB-cyberrisico's, 4 treatment-strategieën.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>TPRM</b> — leveranciersrisico, stappenplan, beveiligingsvragenlijst, contractclausules, NIS2-impact.</li>
+            </ul>
+            <h4>Toegevoegd — Werkbladen</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>Risico-register</b> — werkblad met kans/impact-heatmap-kleuring, eigenaar, treatment, status. Export/Import JSON.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Incident-logboek</b> — timeline-werkblad voor lopend incident (tijd UTC, fase, wie, beschrijving + evidence-IDs).</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Awareness-tracker</b> — medewerker × training matrix met status, datum, score (compliance-bewijs).</li>
+            </ul>
+            <h4>Toegevoegd — Voor de lol</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>Cyber Bullshit Bingo</b> — 5×5 bingo-kaartgenerator met 80+ buzzwords. Klik om af te strepen, knop om te schudden, print-friendly voor je volgende strategie-sessie.</li>
+            </ul>
+            <h4>Aangepast</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> Sidebar uitgebreid met 4 nieuwe secties: <em>Wetgeving &amp; compliance</em>, <em>Verdediging</em>, <em>Incident &amp; risico</em>; <em>Werkbladen</em>-sectie uitgebreid met 3 nieuwe entries.</li>
+              <li><span class="cl-cat feat">FEAT</span> Home tile-grid met sectie-headers voor alle 9 secties.</li>
+              <li><span class="cl-cat feat">FEAT</span> Service-worker bumped naar <code>cyber-field-manual-v4</code> met alle 37 pagina's in pre-cache.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry">
+          <div class="cl-head">
+            <span class="cl-version">v1.2</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag prev">Eerder</span>
+          </div>
+          <div class="cl-section">
+            <h4>Toegevoegd — MKB-relevant</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>Aanvalstechnieken</b>-pagina — initial-access-routes (phishing, gestolen credentials, externe RDP/VPN, supply chain), wat aanvallers daarna doen, moderne MKB-patronen (RaaS, BEC, MFA-fatigue, LOLBins, MSP-kapingen).</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Social Engineering</b>-pagina — Cialdini's 6 hefbomen, alle phishing-varianten (BEC, smishing, vishing, quishing, whaling, OAuth-phishing), pretexting, baiting, tailgating, helpdesk-fraude, deepfakes; concrete MKB-tegenmaatregelen.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Insider Threat</b>-pagina — drie typen (onbedoeld / kwaadwillend / gecompromitteerd), <b>MICE-model</b> (Money, Ideology, Coercion, Ego) met MICE-RC en MERIT-uitbreidingen; gedrags- en technische indicatoren; AVG-context.</li>
+            </ul>
+            <h4>Uitgebreid</h4>
+            <ul>
+              <li><span class="cl-cat docs">DOC</span> <b>Cyber Kill Chain</b>: per fase (1-7) een uitgebreid blok met "wat doet de aanvaller / typische tools / ATT&amp;CK-mapping / detectie / wat kan defender". Plus Courses-of-Action-matrix (Detect/Deny/Disrupt/Degrade/Deceive/Destroy/Contain).</li>
+              <li><span class="cl-cat docs">DOC</span> <b>Glossary</b> opgeschoond — alleen concept-termen; pure acroniem-lookups verhuisd naar Acroniemen-pagina (geen dubbeling).</li>
+            </ul>
+            <h4>Aangepast — logische indeling</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> Sidebar herstructureerd in 6 logische secties: <em>Dreigingen</em> · <em>Aanvalsmodellen</em> · <em>Indicatoren &amp; sharing</em> · <em>Intel-proces</em> · <em>Werkbladen</em> · <em>Naslag</em>. Volgorde volgt het intuïtieve pad: wie, wat, wat zie je, hoe analyseer je, wat doe je ermee.</li>
+              <li><span class="cl-cat feat">FEAT</span> Home-tile-grid herschikt met section-headers in dezelfde 6 secties.</li>
+              <li><span class="cl-cat feat">FEAT</span> Service-worker bumped naar <code>cyber-field-manual-v3</code>; nieuwe pagina's in pre-cache.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry">
+          <div class="cl-head">
+            <span class="cl-version">v1.1</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag prev">Eerder</span>
+          </div>
+          <div class="cl-section">
+            <h4>Toegevoegd</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> <b>Intel Types</b>-pagina — strategisch / operationeel / tactisch / technisch (audience, tijdshorizon, productvorm, voorbeeld).</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Sharing Standards</b>-pagina — STIX 2.1 (SDO/SCO/SRO), TAXII 2.1, MISP (events/objects/galaxy), Sigma + YARA voorbeeldregels.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Kill Chains</b>-pagina — Lockheed Martin (7), Mandiant Attack Lifecycle (8), Unified Kill Chain (Pols, 18) + mapping ↔ ATT&amp;CK.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>Analysis Methods</b>-pagina — ACH, F3EAD, Words of Estimative Probability (Sherman Kent), Heuer SATs, analytische valkuilen.</li>
+              <li><span class="cl-cat feat">FEAT</span> <b>CTI Maturity</b>-pagina — SANS CTI Maturity Model + CTI Capability Maturity Model + groeimetrieken.</li>
+            </ul>
+            <h4>Uitgebreid</h4>
+            <ul>
+              <li><span class="cl-cat docs">DOC</span> <b>Diamond Model</b>: sociaal-politieke as, technologische as, 6 meta-features, gedetailleerd pivot-voorbeeld.</li>
+              <li><span class="cl-cat docs">DOC</span> <b>ATT&amp;CK</b>: techniek/sub-techniek-hiërarchie, Mitigations / Data Sources / Detections / Groups / Software / Campaigns, ATLAS &amp; ICS sub-domains.</li>
+              <li><span class="cl-cat docs">DOC</span> <b>IoC Types</b>: indicator-quality criteria + indicator-lifecycle (5 fasen).</li>
+              <li><span class="cl-cat docs">DOC</span> <b>Threat Actors</b>: motief-taxonomie, vendor-naamgeving (CrowdStrike/Microsoft/Mandiant/Recorded Future), uitbreiding tot 10 groepen.</li>
+              <li><span class="cl-cat docs">DOC</span> <b>Hunting</b>: Hunt Loop (Sqrrl), 5 pivot-technieken.</li>
+              <li><span class="cl-cat docs">DOC</span> <b>Glossary</b> uitgebreid van 30 → 47 termen.</li>
+              <li><span class="cl-cat docs">DOC</span> <b>Reporting Templates</b>: Threat Actor Profile-template toegevoegd.</li>
+            </ul>
+            <h4>Aangepast</h4>
+            <ul>
+              <li><span class="cl-cat feat">FEAT</span> Sidebar herstructureerd: <em>Intelligence</em> / <em>Threats</em> / <em>Analyse</em> / <em>Werkbladen</em> / <em>Naslag</em>.</li>
+              <li><span class="cl-cat feat">FEAT</span> Disclaimer op homepagina als inklap-item (<code>&lt;details&gt;</code>) — wordt automatisch geopend bij deeplink <code>#disclaimer</code>.</li>
+              <li><span class="cl-cat feat">FEAT</span> <code>index.html</code> toegevoegd dat doorverwijst naar <code>home.html</code> (loste 403 op nginx-root op).</li>
+              <li><span class="cl-cat feat">FEAT</span> Service-worker bumped naar <code>cti-field-manual-v2</code>; nieuwe pagina's in pre-cache.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry">
+          <div class="cl-head">
+            <span class="cl-version">v1.0</span>
+            <span class="cl-date">2026-04-30</span>
+            <span class="cl-tag prev">Eerste release</span>
+          </div>
+          <div class="cl-section">
+            <h4>Inhoud</h4>
+            <ul>
+              <li>Intel Cycle (PIR-werkblad), IoC Types (Pyramid of Pain), TLP &amp; PAP, Admiralty, Threat Actors (basis), MITRE ATT&amp;CK + D3FEND (basis), Diamond Model, Hunting Werkblad, Reporting Templates, Glossary (30), Bronnen, Handleiding.</li>
+              <li>Network-first service-worker (cache <code>cti-field-manual-v1</code>).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

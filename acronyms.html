@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acroniemen — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Acroniemen</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Acroniemen</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Acroniemen</div>
+        <div class="page-subtitle">Cyber- en IT-acroniemen voor MKB Nederland — 100+ termen, doorzoekbaar</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Acroniemen — A-Z</h2>
+          <p>Alle veelgebruikte cyber- en IT-acroniemen die een Nederlandse MKB-organisatie tegenkomt: wetgeving, frameworks, dreigingsbegrippen, technische standaarden en rollen. Filter via het zoekveld.</p>
+          <input type="text" id="acroSearch" placeholder="Filter op acroniem of betekenis..." style="width:100%;max-width:420px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-surface);color:var(--text-primary);font-size:13px;margin-bottom:14px">
+          <div id="acroCount" style="font-size:11px;color:var(--text-muted);margin-bottom:10px"></div>
+          <dl id="acroList" style="font-size:13px;line-height:1.7"></dl>
+        </section>
+      </div>
+      <script>
+        const ACRO = [
+          ["2FA","Two-Factor Authentication","Beveiligingsmaatregel waarbij je naast een wachtwoord een tweede stap nodig hebt (app-code, sms, key)."],
+          ["AES","Advanced Encryption Standard","Symmetrisch versleutelingsalgoritme (128/192/256 bit), de-facto-standaard voor encryptie."],
+          ["AI Act","EU Artificial Intelligence Act","Europese verordening die risicogebaseerde regels stelt aan AI-systemen (in werking 2026)."],
+          ["AIVD","Algemene Inlichtingen- en Veiligheidsdienst","Nederlandse civiele inlichtingendienst, publiceert o.a. Cybersecuritybeeld Nederland."],
+          ["AP","Autoriteit Persoonsgegevens","Nederlandse toezichthouder op de AVG."],
+          ["APT","Advanced Persistent Threat","Hooggekwalificeerde, vaak staatsgesteunde actor met langdurige toegang."],
+          ["ATT&amp;CK","Adversarial Tactics, Techniques &amp; Common Knowledge","MITRE-kennisbank van aanvallergedrag (T-IDs)."],
+          ["AVG","Algemene Verordening Gegevensbescherming","Nederlandse benaming van de GDPR (privacy-wet)."],
+          ["BCM","Business Continuity Management","Discipline om bedrijfsprocessen draaiende te houden bij verstoringen."],
+          ["BCP","Business Continuity Plan","Plan dat beschrijft hoe je bedrijf doorgaat bij een grote verstoring."],
+          ["BEC","Business Email Compromise","Gerichte e-mail-fraude (factuur-fraude, CEO-fraude)."],
+          ["BIA","Business Impact Analysis","Analyse van welke processen kritiek zijn en hoeveel downtime acceptabel is."],
+          ["BIO","Baseline Informatiebeveiliging Overheid","Verplichte informatiebeveiligingsbaseline voor de Nederlandse overheid."],
+          ["BYOD","Bring Your Own Device","Beleid waarbij medewerkers eigen apparatuur zakelijk gebruiken."],
+          ["CA","Certificate Authority","Vertrouwde uitgever van TLS/SSL-certificaten."],
+          ["CASB","Cloud Access Security Broker","Tussenlaag tussen gebruikers en clouddiensten voor zichtbaarheid &amp; controle."],
+          ["CER","Critical Entities Resilience","EU-richtlijn voor weerbaarheid van kritieke entiteiten (broer/zus van NIS2)."],
+          ["CIA","Confidentiality, Integrity, Availability","Drie kernprincipes van informatiebeveiliging."],
+          ["CISA","Cybersecurity and Infrastructure Security Agency","Federale Amerikaanse cybersecurity-instantie."],
+          ["CISO","Chief Information Security Officer","Eindverantwoordelijke voor informatiebeveiliging in de organisatie."],
+          ["CMDB","Configuration Management Database","Inventaris van IT-assets en hun onderlinge relaties."],
+          ["CMMC","Cybersecurity Maturity Model Certification","US DoD certificeringsprogramma voor leveranciers."],
+          ["CSAN","Cybersecuritybeeld Nederland","Jaarlijkse threat-assessment van AIVD/MIVD/NCSC."],
+          ["CSF","Cybersecurity Framework","NIST raamwerk (Identify, Protect, Detect, Respond, Recover, Govern)."],
+          ["CSIRT","Computer Security Incident Response Team","Team dat security-incidenten opvangt en coördineert."],
+          ["CTI","Cyber Threat Intelligence","Verzamelen, analyseren en delen van dreigingsinformatie."],
+          ["CVE","Common Vulnerabilities and Exposures","Wereldwijd uniek nummer per bekende kwetsbaarheid."],
+          ["CVSS","Common Vulnerability Scoring System","Standaard om CVE's een ernstscore (0-10) te geven."],
+          ["DDoS","Distributed Denial of Service","Aanval die diensten platlegt door massale traffic."],
+          ["DKIM","DomainKeys Identified Mail","E-mail-authenticatie met digitale handtekening per bericht."],
+          ["DLP","Data Loss Prevention","Technologie die ongeautoriseerde data-uitstroom voorkomt."],
+          ["DMARC","Domain-based Message Authentication, Reporting &amp; Conformance","E-mail-beleid bovenop SPF/DKIM."],
+          ["DNS","Domain Name System","Vertaalt namen (example.com) naar IP-adressen."],
+          ["DNSSEC","DNS Security Extensions","Cryptografische bescherming tegen DNS-vervalsing."],
+          ["DORA","Digital Operational Resilience Act","EU-verordening operationele weerbaarheid voor financiële sector (vanaf jan 2025)."],
+          ["DPIA","Data Protection Impact Assessment","Privacy-effect-analyse — verplicht bij hoog risico-verwerkingen."],
+          ["DPA","Data Processing Agreement","Verwerkersovereenkomst (vereist door AVG bij outsourcen verwerkingen)."],
+          ["DPO","Data Protection Officer","Functionaris Gegevensbescherming (FG)."],
+          ["DRP","Disaster Recovery Plan","Plan om IT-systemen te herstellen na een ramp."],
+          ["DTC","Digital Trust Center","Loket EZK voor cybersecurity-info gericht op MKB Nederland."],
+          ["EDR","Endpoint Detection &amp; Response","Endpoint-beveiliging met detectie + analyse + response."],
+          ["EPSS","Exploit Prediction Scoring System","Voorspelt kans dat een CVE binnen 30 dagen daadwerkelijk geëxploiteerd wordt."],
+          ["FG","Functionaris Gegevensbescherming","Nederlandse term voor DPO."],
+          ["GDPR","General Data Protection Regulation","Europese privacy-verordening (in NL: AVG)."],
+          ["HIDS","Host-based Intrusion Detection System","Inbraakdetectie op één host (bv. OSSEC, Wazuh)."],
+          ["HSM","Hardware Security Module","Hardware-apparaat dat cryptografische sleutels beveiligt."],
+          ["HTTPS","HTTP Secure","HTTP over TLS — geënsleutelde webcommunicatie."],
+          ["IAM","Identity &amp; Access Management","Beheer van identiteiten en hun toegangsrechten."],
+          ["IDS","Intrusion Detection System","Detecteert verdachte netwerkactiviteit (passief)."],
+          ["IoC","Indicator of Compromise","Observeerbaar artefact dat wijst op compromittering."],
+          ["IPS","Intrusion Prevention System","Detecteert én blokkeert verdachte activiteit (actief)."],
+          ["ISAC","Information Sharing and Analysis Center","Sectorale dreigingsdeelplatformen (bv. FI-ISAC, Health-ISAC)."],
+          ["ISMS","Information Security Management System","Managementsysteem volgens ISO 27001."],
+          ["ISO 27001","Internationale norm voor managementsystemen voor informatiebeveiliging","Certificeerbaar; basis voor veel B2B-eisen."],
+          ["ISO 27002","Praktijkrichtlijn met beheersmaatregelen","Begeleidt 27001 met concrete controls."],
+          ["JTBD","Job To Be Done","Productontwerpprincipe — wat probeert de gebruiker écht te bereiken?"],
+          ["KEV","Known Exploited Vulnerabilities","CISA-lijst van CVE's waarvoor actieve uitbuiting bewezen is."],
+          ["KPI","Key Performance Indicator","Meetbare prestatie-indicator."],
+          ["KvK","Kamer van Koophandel","Nederlandse handelsregister."],
+          ["MDM","Mobile Device Management","Centraal beheer van mobiele werkapparaten."],
+          ["MFA","Multi-Factor Authentication","Inloggen met 2 of meer verschillende factoren."],
+          ["MISP","Malware Information Sharing Platform","Open-source threat-sharing platform (CIRCL)."],
+          ["MIVD","Militaire Inlichtingen- en Veiligheidsdienst","Nederlandse militaire inlichtingendienst."],
+          ["MTBF","Mean Time Between Failures","Gemiddelde tijd tussen storingen."],
+          ["MTTD","Mean Time To Detect","Gemiddelde detectie-tijd voor incidenten."],
+          ["MTTR","Mean Time To Respond / Recover","Gemiddelde reactie- of hersteltijd."],
+          ["NAC","Network Access Control","Toegangscontrole voor apparaten op het netwerk."],
+          ["NCSC","Nationaal Cyber Security Centrum","Onderdeel van Min. J&amp;V; richt zich op overheid &amp; vitaal."],
+          ["NIS2","Network and Information Security Directive 2","Verbrede EU-richtlijn cybersecurity (van NIS naar NIS2; impact ook MKB &amp; toeleveranciers)."],
+          ["NIST","National Institute of Standards and Technology","US-standaardisatie-instituut, beheerder van CSF en SP800-serie."],
+          ["OSINT","Open Source Intelligence","Inlichtingen uit openbare bronnen."],
+          ["OT","Operational Technology","ICS / SCADA / fabrieksautomatisering."],
+          ["PAM","Privileged Access Management","Speciaal beheer van high-privilege accounts."],
+          ["PAP","Permissible Actions Protocol","MISP-standaard voor wat je met info mag doen."],
+          ["PCI DSS","Payment Card Industry Data Security Standard","Verplicht bij verwerken creditcard-gegevens."],
+          ["PIM","Privileged Identity Management","≈ PAM, focus op identiteitslevenscyclus van priv-accounts."],
+          ["PIR","Priority Intelligence Requirement","Prioritair informatiebehoefte van een besluitvormer."],
+          ["PKI","Public Key Infrastructure","Stelsel van CA's en certificaten voor publieke-sleutel-cryptografie."],
+          ["RaaS","Ransomware-as-a-Service","Operator levert ransomware-platform; affiliates voeren aanvallen uit."],
+          ["RACI","Responsible, Accountable, Consulted, Informed","Verantwoordelijkheidsmatrix per taak."],
+          ["RBAC","Role-Based Access Control","Toegangsrechten gekoppeld aan rollen i.p.v. personen."],
+          ["RPO","Recovery Point Objective","Maximaal toegestaan dataverlies (in tijd) na incident."],
+          ["RTO","Recovery Time Objective","Maximaal toegestane downtime na incident."],
+          ["SaaS","Software as a Service","Software vanuit de cloud."],
+          ["SASE","Secure Access Service Edge","Convergentie van netwerk- en security-functies vanuit de cloud."],
+          ["SBOM","Software Bill of Materials","Lijst van alle componenten / libraries in software."],
+          ["SCA","Software Composition Analysis","Scannen op kwetsbare/licentie-foute open-source componenten."],
+          ["SIEM","Security Information and Event Management","Centrale log-aggregatie + correlatie."],
+          ["SLA","Service Level Agreement","Afspraken over dienstverlening (uptime, response-tijd)."],
+          ["SOAR","Security Orchestration, Automation and Response","Automatisering van security-workflows."],
+          ["SOC","Security Operations Center","Team/afdeling die 24/7 security monitort."],
+          ["SOC 2","Service Organization Control 2","Audit-rapport over een dienstverlener (US-georiënteerd, B2B)."],
+          ["SPF","Sender Policy Framework","E-mail-authenticatie via DNS-records."],
+          ["SSO","Single Sign-On","Eén keer inloggen voor meerdere applicaties."],
+          ["STIX","Structured Threat Information Expression","JSON-schema voor CTI-objecten (OASIS)."],
+          ["TAXII","Trusted Automated eXchange of Indicator Information","REST-API voor STIX-uitwisseling."],
+          ["TLP","Traffic Light Protocol","Markeert distributie-perimeter van gedeelde info."],
+          ["TLS","Transport Layer Security","Versleuteling op transportniveau (opvolger SSL)."],
+          ["TPM","Trusted Platform Module","Beveiligings-chip in moderne PCs voor sleutel-opslag."],
+          ["TPRM","Third-Party Risk Management","Risicobeheer van leveranciers/partners."],
+          ["TTP","Tactics, Techniques and Procedures","Hoe een actor opereert."],
+          ["URL","Uniform Resource Locator","Web-adres."],
+          ["VPN","Virtual Private Network","Versleutelde tunnel naar een ander netwerk."],
+          ["WAF","Web Application Firewall","Firewall specifiek voor webapplicaties (OWASP top-10-bescherming)."],
+          ["WBNI","Wet Beveiliging Netwerk- en Informatiesystemen","Nederlandse implementatie van NIS (wordt vervangen door cyberwet voor NIS2)."],
+          ["XDR","Extended Detection and Response","EDR + identity + network + cloud, gecorreleerd."],
+          ["YARA","pattern-matching tool","Voor file-based malware-detectie."],
+          ["ZTNA","Zero Trust Network Access","\"Never trust, always verify\" netwerktoegang."]
+        ];
+        const root = document.getElementById('acroList');
+        const inp = document.getElementById('acroSearch');
+        const cnt = document.getElementById('acroCount');
+        function render(){
+          const q = inp.value.toLowerCase().trim();
+          const filt = !q ? ACRO : ACRO.filter(([a,n,d]) => (a+' '+n+' '+d).toLowerCase().indexOf(q)!==-1);
+          cnt.textContent = filt.length + ' van ' + ACRO.length + ' acroniemen';
+          root.innerHTML = filt.map(([a,n,d]) => '<dt style="font-weight:700;color:var(--text-primary);margin-top:10px"><span style="color:var(--accent);font-family:var(--font-mono)">'+a+'</span> &mdash; '+n+'</dt><dd style="margin:0 0 8px 0;color:var(--text-secondary)">'+d+'</dd>').join('') || '<div style="color:var(--text-muted)">Geen acroniemen gevonden.</div>';
+        }
+        inp.addEventListener('input', render);
+        render();
+      </script>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

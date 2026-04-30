@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bronnen — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Bronnen</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Bronnen</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Bronnen</div>
+        <div class="page-subtitle">Frameworks, naslag, methodologie en maturity</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+
+      <div class="manual-content" style="max-width:900px">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Bronnen &amp; referenties</h2>
+        </section>
+
+        <section class="manual-section">
+          <h3>Frameworks &amp; modellen</h3>
+          <ul>
+            <li><a href="https://attack.mitre.org/" target="_blank" style="color:var(--accent)">MITRE ATT&amp;CK</a></li>
+            <li><a href="https://d3fend.mitre.org/" target="_blank" style="color:var(--accent)">MITRE D3FEND</a></li>
+            <li><a href="https://atlas.mitre.org/" target="_blank" style="color:var(--accent)">MITRE ATLAS</a> — adversarial ML threats</li>
+            <li><a href="https://www.mandiant.com/sites/default/files/2021-09/diamond-model-of-intrusion-analysis.pdf" target="_blank" style="color:var(--accent)">Diamond Model paper</a> (Caltagirone, Pendergast, Betz, 2013)</li>
+            <li><a href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" target="_blank" style="color:var(--accent)">Lockheed Martin Cyber Kill Chain</a></li>
+            <li><a href="https://www.unifiedkillchain.com/" target="_blank" style="color:var(--accent)">Unified Kill Chain</a> (Paul Pols, 2017)</li>
+            <li><a href="https://www.first.org/tlp/" target="_blank" style="color:var(--accent)">FIRST — Traffic Light Protocol 2.0</a></li>
+            <li><a href="https://www.misp-project.org/taxonomies.html#_pap" target="_blank" style="color:var(--accent)">MISP — PAP taxonomy</a></li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h3>Threat actor naslag</h3>
+          <ul>
+            <li><a href="https://attack.mitre.org/groups/" target="_blank" style="color:var(--accent)">MITRE ATT&amp;CK Groups</a></li>
+            <li><a href="https://malpedia.caad.fkie.fraunhofer.de/" target="_blank" style="color:var(--accent)">Malpedia (Fraunhofer FKIE)</a></li>
+            <li><a href="https://thaicert.or.th/threat-group-cards/" target="_blank" style="color:var(--accent)">ThaiCERT — Threat Group Cards</a></li>
+            <li><a href="https://attack.mitre.org/software/" target="_blank" style="color:var(--accent)">ATT&amp;CK Software</a></li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h3>Standaarden &amp; sharing</h3>
+          <ul>
+            <li><a href="https://oasis-open.github.io/cti-documentation/" target="_blank" style="color:var(--accent)">OASIS — STIX 2.1 / TAXII 2.1</a></li>
+            <li><a href="https://www.misp-project.org/" target="_blank" style="color:var(--accent)">MISP — Open Source Threat Sharing</a></li>
+            <li><a href="https://github.com/SigmaHQ/sigma" target="_blank" style="color:var(--accent)">SigmaHQ</a> — generic SIEM detection format</li>
+            <li><a href="https://yara.readthedocs.io/" target="_blank" style="color:var(--accent)">YARA</a></li>
+            <li><a href="https://github.com/redcanaryco/atomic-red-team" target="_blank" style="color:var(--accent)">Atomic Red Team</a> — emulation library</li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h3>Methodologie &amp; analyse</h3>
+          <ul>
+            <li><a href="https://www.cia.gov/static/Pyschology-of-Intelligence-Analysis.pdf" target="_blank" style="color:var(--accent)">Heuer — Psychology of Intelligence Analysis</a> (CIA, 1999)</li>
+            <li><a href="https://www.fas.org/irp/eprint/admiralty.pdf" target="_blank" style="color:var(--accent)">Admiralty Code (NATO STANAG 2511)</a></li>
+            <li><a href="https://detect.fyi/the-pyramid-of-pain-c8b0a6ea0d39" target="_blank" style="color:var(--accent)">David Bianco — Pyramid of Pain (2013)</a></li>
+            <li><a href="https://www.cia.gov/resources/csi/static/Words-of-Estimative-Probability.pdf" target="_blank" style="color:var(--accent)">Sherman Kent — Words of Estimative Probability</a></li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h3>Volwassenheid &amp; programma</h3>
+          <ul>
+            <li><a href="https://www.sans.org/blog/cyber-threat-intelligence-maturity-model/" target="_blank" style="color:var(--accent)">SANS CTI Maturity Model</a></li>
+            <li><a href="https://www.cti-cmm.org/" target="_blank" style="color:var(--accent)">CTI-CMM (CTI Capability Maturity Model)</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>

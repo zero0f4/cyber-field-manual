@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Methods — Cyber Field Manual</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFM">
+  <meta name="theme-color" content="#dc2626">
+  <script src="theme.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu openen"><span data-icon="menu" data-icon-size="20"></span></button>
+  <div class="mobile-menu-overlay" id="menuOverlay"></div>
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon" data-icon="eye" data-icon-size="20"></span>
+        <span class="logo-text"><strong>CFM</strong> Cyber Field Manual</span>
+      </div>
+      <div class="version-badge">Analysis</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="home.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="home"></span> Homepagina</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Dreigingen</div>
+      <a href="threat-actors.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Threat Actors</a>
+      <a href="aanvalstechnieken.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> Aanvalstechnieken</a>
+      <a href="social-engineering.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> Social Engineering</a>
+      <a href="insider-threat.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="actor"></span> Insider Threat</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Aanvalsmodellen</div>
+      <a href="kill-chains.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="target"></span> Kill Chains</a>
+      <a href="diamond.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="diamond"></span> Diamond Model</a>
+      <a href="attack.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="attack"></span> ATT&amp;CK + D3FEND</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Indicatoren &amp; sharing</div>
+      <a href="ioc.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="ioc"></span> IoC Types</a>
+      <a href="admiralty.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Source Evaluation</a>
+      <a href="tlp.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="flag"></span> TLP &amp; PAP</a>
+      <a href="sharing.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Sharing Standards</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Wetgeving &amp; compliance</div>
+      <a href="nis2.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> NIS2 &amp; Cyberwet</a>
+      <a href="avg.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> AVG / GDPR</a>
+      <a href="dora.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> DORA</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Verdediging</div>
+      <a href="basismaatregelen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Basismaatregelen MKB</a>
+      <a href="backup.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Backup &amp; Ransomware</a>
+      <a href="mfa-identity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="tbb"></span> MFA &amp; Identity</a>
+      <a href="cloud-security.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="defend"></span> Cloud Security</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Incident &amp; risico</div>
+      <a href="ir-proces.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> IR-proces &amp; meldplichten</a>
+      <a href="risk-management.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="gaps"></span> Risk Management</a>
+      <a href="tprm.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> TPRM (leveranciers)</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Intel-proces</div>
+      <a href="intel-cycle.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="cycle"></span> Intel Cycle</a>
+      <a href="intel-types.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="eye"></span> Intel Types</a>
+      <a href="analysis-methods.html" class="nav-item active" style="text-decoration:none"><span class="nav-icon" data-icon="scale"></span> Analysis Methods</a>
+      <a href="maturity.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="requirements"></span> CTI Maturity</a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Naslag</div>
+      <a href="acronyms.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Acroniemen</a>
+      <a href="glossary.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="glossary"></span> Glossary</a>
+      <a href="bronnen.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="sources"></span> Bronnen</a>
+      <a href="handleiding.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="manual"></span> Handleiding</a>
+      <a href="changelog.html" class="nav-item" style="text-decoration:none"><span class="nav-icon" data-icon="info"></span> Wijzigingsblad</a>
+    </nav>
+    <div class="sidebar-frameworks">
+      <div class="sidebar-hint">
+        Praktisch werkboek voor MKB-NL. Alles werkt lokaal — geen data verstuurd, geen tracking, geen cookies.
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Wissel licht/donker thema">
+        <span class="theme-toggle-icon" data-icon="theme-dark"></span>
+        <span class="theme-toggle-label">Donker thema</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="home.html"><span data-icon="home" data-icon-size="14"></span> Home</a>
+      <span class="crumb-sep" data-icon="chevron-right" data-icon-size="12"></span>
+      <span class="crumb-current">Analysis Methods</span>
+    </nav>
+
+    <div class="page-header">
+      <div>
+        <div class="page-title">Analysis Methods</div>
+        <div class="page-subtitle">ACH · F3EAD · Words of Estimative Probability · SATs · valkuilen</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted);max-width:560px;line-height:1.5">
+          <span style="color:#eab308;font-weight:600">⚠ Disclaimer —</span> de tool kan fouten of verkeerde interpretaties bevatten. De gebruiker is altijd zelf verantwoordelijk voor controle. <a href="home.html#disclaimer" style="color:var(--accent)">Volledige disclaimer</a>.
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="back-home-mobile">
+      <span data-icon="arrow-left" data-icon-size="16"></span> Terug naar home
+    </a>
+
+    <div class="content-area">
+<style>.dm-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.dm-card{padding:14px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--bg-surface)}.dm-card h4{margin:0 0 6px 0;font-size:13px;display:flex;align-items:center;gap:6px}.dm-card .dot{display:inline-block;width:10px;height:10px;border-radius:50%}.dm-card p{font-size:12px;color:var(--text-secondary);margin:4px 0;line-height:1.55}.section-table{width:100%;border-collapse:collapse;font-size:13px}.section-table th{text-align:left;padding:8px;background:var(--bg-elevated);border-bottom:2px solid var(--border)}.section-table td{padding:8px;border-bottom:1px solid var(--border-light);vertical-align:top}.kv-row{display:flex;gap:10px;margin:4px 0}.kv-row b{min-width:140px;color:var(--text-primary)}.callout{background:rgba(37,99,235,0.06);border:1px solid var(--accent-dim);border-left:3px solid var(--accent);padding:10px 14px;border-radius:var(--radius);margin:10px 0;font-size:13px;color:var(--text-secondary)}</style>
+      <div class="manual-content">
+        <section class="manual-section">
+          <h2><span class="sec-num">01</span> Analysis of Competing Hypotheses (ACH)</h2>
+          <p>Methode van <b>Richards J. Heuer Jr.</b> (CIA, 1999) om analytische bias tegen te gaan. Forceert je systematisch álle plausibele hypothesen te toetsen tegen álle bewijsstukken — in plaats van te vertrouwen op de eerste hypothese die "logisch" voelt.</p>
+          <ol>
+            <li><b>Hypothesen formuleren</b> — schrijf álle plausibele alternatieven uit, niet alleen de favoriet.</li>
+            <li><b>Bewijslijst opstellen</b> — al het beschikbare bewijs (waarnemingen, indicatoren, meldingen).</li>
+            <li><b>Matrix bouwen</b> — rijen = bewijs, kolommen = hypothesen. Per cel: consistent (C), inconsistent (I) of N/A.</li>
+            <li><b>Verfijnen</b> — verwijder bewijs dat álle hypothesen ondersteunt (geen onderscheidingsvermogen).</li>
+            <li><b>Voorlopige conclusie</b> — focus op hypothesen met de minste inconsistenties (niet de meeste consistenties!).</li>
+            <li><b>Sensitiviteit</b> — welke conclusie kantelt als één bewijsstuk anders blijkt?</li>
+            <li><b>Rapportage</b> — geef relatieve waarschijnlijkheden, niet alleen de "winnende" hypothese.</li>
+          </ol>
+          <div class="callout"><b>Kernidee:</b> bewijs dat met meerdere hypothesen consistent is, is diagnostiek-arm. Bewijs dat één hypothese inconsistent maakt, is veel waardevoller.</div>
+        </section>
+
+        <section class="manual-section" id="f3ead">
+          <h2><span class="sec-num">02</span> F3EAD-cyclus</h2>
+          <p>Actie-georiënteerde variant van de Intel Cycle, afkomstig uit US Special Operations. Loopt rond <em>kinetisch resultaat</em>, niet rond rapportage. Veel gebruikt in IR &amp; threat-hunting.</p>
+          <ul>
+            <li><b>Find</b> — target identificeren (bv. compromised host).</li>
+            <li><b>Fix</b> — locatie/scope vastpinnen.</li>
+            <li><b>Finish</b> — actie ondernemen (containment, eradication).</li>
+            <li><b>Exploit</b> — maximaal nut halen uit wat je vond (forensisch onderzoek, IoCs harvesten).</li>
+            <li><b>Analyze</b> — patronen leggen, koppelen aan bestaande intel, hypothesen formuleren.</li>
+            <li><b>Disseminate</b> — bevindingen delen (intern hunters, ISACs, vendor).</li>
+          </ul>
+          <p style="font-size:12px;color:var(--text-muted)">F3EAD is een lus, niet één run. Vaak loopt het naast de klassieke cycle: F3EAD = "operations-side", Intel Cycle = "intel-side".</p>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">03</span> Words of Estimative Probability (Sherman Kent, 1964)</h2>
+          <p>Standaardisatie van waarschijnlijkheidstaal in inlichtingenproducten — voorkomt dat "waarschijnlijk" voor de ene lezer 51% en voor de andere 90% betekent.</p>
+          <table class="section-table"><thead><tr><th>Bewoording</th><th>Waarschijnlijkheid</th></tr></thead><tbody>
+            <tr><td>Almost certainly / vrijwel zeker</td><td>93% — 99%</td></tr>
+            <tr><td>Highly likely / zeer waarschijnlijk</td><td>80% — 92%</td></tr>
+            <tr><td>Likely / waarschijnlijk</td><td>55% — 79%</td></tr>
+            <tr><td>Roughly even chance / ongeveer gelijke kans</td><td>45% — 54%</td></tr>
+            <tr><td>Unlikely / onwaarschijnlijk</td><td>20% — 44%</td></tr>
+            <tr><td>Highly unlikely / zeer onwaarschijnlijk</td><td>7% — 19%</td></tr>
+            <tr><td>Almost no chance / vrijwel geen kans</td><td>1% — 6%</td></tr>
+          </tbody></table>
+          <div class="callout"><b>Vermijden:</b> "could", "might", "possible" zonder verdere kwalificatie — die zeggen niets en voorkomen geen aansprakelijkheid.</div>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">04</span> Heuer's Structured Analytic Techniques (SATs)</h2>
+          <p>Heuer en Pherson hebben een set <b>structured analytic techniques</b> uitgewerkt om bias te beperken. Veel gebruikte:</p>
+          <ul>
+            <li><b>Key Assumptions Check</b> — maak álle aannames expliciet die onder je analyse liggen, en toets de zwakste.</li>
+            <li><b>Devil's Advocacy</b> — wijs één persoon aan om de tegenstem te organiseren.</li>
+            <li><b>Red Team Analysis</b> — analyse vanuit de aanvaller-perspectief.</li>
+            <li><b>What-If Analysis</b> — keer een aanname om en zie waar de analyse op uitkomt.</li>
+            <li><b>Indicators Generation</b> — definieer vooraf welke waarnemingen een hypothese zouden bevestigen of ontkrachten.</li>
+            <li><b>Quality of Information Check</b> — beoordeel iedere bron op betrouwbaarheid (zie <a href="admiralty.html" style="color:var(--accent)">Admiralty</a>).</li>
+            <li><b>Premortem</b> — stel je voor dat de analyse achteraf onjuist bleek; waar zou dat door zijn gekomen?</li>
+            <li><b>Cone of Plausibility</b> — schets een bandbreedte van toekomstige scenario's, niet één enkele projectie.</li>
+          </ul>
+        </section>
+
+        <section class="manual-section">
+          <h2><span class="sec-num">05</span> Analytische valkuilen</h2>
+          <ul>
+            <li><b>Confirmation bias</b> — alleen op zoek gaan naar wat de bestaande hypothese bevestigt.</li>
+            <li><b>Anchoring</b> — eerste indruk overschat, latere informatie wordt eraan opgehangen.</li>
+            <li><b>Mirror imaging</b> — aannemen dat de tegenstander redeneert zoals jij.</li>
+            <li><b>Group-think</b> — consensus voor confrontatie verkiezen.</li>
+            <li><b>Recency bias</b> — recente events meer gewicht geven dan ze verdienen.</li>
+            <li><b>Attribution rush</b> — actor-naam plakken voordat bewijs het draagt.</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="icons.js"></script>
+<script src="menu.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js")}</script>
+
+</body>
+</html>
